@@ -38,6 +38,7 @@
 		EF3BF9981F6FB65500849CF5 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 		EF3BF9991F6FB65500849CF5 /* glad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
 		EF3BF99A1F6FB65500849CF5 /* khrplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
+		EF3BF99E1F6FC3FC00849CF5 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +116,7 @@
 				EF3BF99A1F6FB65500849CF5 /* khrplatform.h */,
 				EF3BF9941F6FAFEB00849CF5 /* learnopengl.h */,
 				EF3BF9951F6FAFEB00849CF5 /* shader.h */,
+				EF3BF99E1F6FC3FC00849CF5 /* stb_image.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
