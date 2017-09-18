@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		EF3BF8471F6F774800849CF5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF8461F6F774800849CF5 /* main.cpp */; };
 		EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */; };
-		EF3BF8511F6F782600849CF5 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8501F6F782600849CF5 /* libGLEW.2.1.0.dylib */; };
 		EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */; };
+		EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF9981F6FB65500849CF5 /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +31,13 @@
 		EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EF3BF8501F6F782600849CF5 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
 		EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		EF3BF9941F6FAFEB00849CF5 /* learnopengl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = learnopengl.h; sourceTree = "<group>"; };
+		EF3BF9951F6FAFEB00849CF5 /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
+		EF3BF9961F6FAFF100849CF5 /* first.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = first.frag; sourceTree = "<group>"; };
+		EF3BF9971F6FAFF100849CF5 /* first.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = first.vert; sourceTree = "<group>"; };
+		EF3BF9981F6FB65500849CF5 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		EF3BF9991F6FB65500849CF5 /* glad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
+		EF3BF99A1F6FB65500849CF5 /* khrplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +46,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */,
-				EF3BF8511F6F782600849CF5 /* libGLEW.2.1.0.dylib in Frameworks */,
 				EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +94,8 @@
 		EF3BF8541F6F976300849CF5 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				EF3BF9971F6FAFF100849CF5 /* first.vert */,
+				EF3BF9961F6FAFF100849CF5 /* first.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -102,6 +110,11 @@
 		EF3BF8561F6F97D600849CF5 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				EF3BF9981F6FB65500849CF5 /* glad.c */,
+				EF3BF9991F6FB65500849CF5 /* glad.h */,
+				EF3BF99A1F6FB65500849CF5 /* khrplatform.h */,
+				EF3BF9941F6FAFEB00849CF5 /* learnopengl.h */,
+				EF3BF9951F6FAFEB00849CF5 /* shader.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
+				EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
