@@ -11,6 +11,7 @@
 		EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */; };
 		EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */; };
 		EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF9981F6FB65500849CF5 /* glad.c */; };
+		EF3BF9A01F6FC4A000849CF5 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF99F1F6FC4A000849CF5 /* stb_image.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		EF3BF9991F6FB65500849CF5 /* glad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
 		EF3BF99A1F6FB65500849CF5 /* khrplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
 		EF3BF99E1F6FC3FC00849CF5 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		EF3BF99F1F6FC4A000849CF5 /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		EF3BF8551F6F97BB00849CF5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EF3BF99F1F6FC4A000849CF5 /* stb_image.cpp */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3BF9A01F6FC4A000849CF5 /* stb_image.cpp in Sources */,
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
 				EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */,
 			);
