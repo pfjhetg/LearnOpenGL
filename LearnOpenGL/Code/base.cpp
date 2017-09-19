@@ -8,22 +8,19 @@
 
 #include "base.hpp"
 
-base::base()
-{
+base::base() {
     
 }
 
-base::base(GLFWwindow *window)
-{
+base::base(GLFWwindow *window) {
     this->window = window;
 }
 
-void base::loadShader()
-{
+void base::loadShader() {
     // build and compile our shader program, 绝对路径
     // ------------------------------------
-//    Shader ourShader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/first.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/first.frag");
-    this->shader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/first.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/first.frag");
+//    Shader ourShader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.3.shader.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.3.shader.frag");
+    this->shader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.3.shader.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.3.shader.frag");
     
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -55,15 +52,10 @@ void base::loadShader()
     // glBindVertexArray(0);
 }
 
-void base::renderLoop()
-{
-    // render
-    // ------
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-    
+void base::renderLoop() {
     // render the triangle
     this->shader->use();
+    // 当我们打算绘制一个物体的时候，我们要在绘制物体前简单地把VAO绑定到希望使用的设定上
     glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, 3);
     
@@ -73,7 +65,7 @@ void base::renderLoop()
     glfwPollEvents();
 }
 
-void base::deallocate()
-{
-    
+void base::deallocate() {
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
 }

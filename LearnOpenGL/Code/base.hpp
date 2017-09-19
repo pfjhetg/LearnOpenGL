@@ -11,18 +11,18 @@
 
 #include "shader.h"
 
-class base
-{
-private:
+class base {
+public:
     GLFWwindow *window;
     Shader *shader;
     unsigned int VBO, VAO, EBO;
-public:
+    unsigned int texture;
+    
     base();
     base(GLFWwindow *window);
-    void loadShader();
-    void renderLoop();
-    void deallocate();
+    virtual void loadShader();
+    virtual void renderLoop();
+    virtual void deallocate();
     
 };
 

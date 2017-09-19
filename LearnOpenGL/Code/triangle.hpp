@@ -11,9 +11,11 @@
 
 #include "base.hpp"
 
-class triangle: public base
-{
-    
+class triangle: public base {
+public:
+    triangle();
+    triangle(GLFWwindow *window);
+    void loadShader();
 };
 
 #endif /* triangle_hpp */
