@@ -11,7 +11,9 @@
 		EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */; };
 		EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */; };
 		EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF9981F6FB65500849CF5 /* glad.c */; };
-		EF3BF9A01F6FC4A000849CF5 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF99F1F6FC4A000849CF5 /* stb_image.cpp */; };
+		EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC18D1F70A67000AD327C /* stb_image.cpp */; };
+		EF7AC1921F70A73E00AD327C /* triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1901F70A73E00AD327C /* triangle.cpp */; };
+		EF7AC1951F70A9D100AD327C /* base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1931F70A9D100AD327C /* base.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,7 +42,12 @@
 		EF3BF9991F6FB65500849CF5 /* glad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
 		EF3BF99A1F6FB65500849CF5 /* khrplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
 		EF3BF99E1F6FC3FC00849CF5 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
-		EF3BF99F1F6FC4A000849CF5 /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
+		EF7AC18D1F70A67000AD327C /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
+		EF7AC18F1F70A67800AD327C /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
+		EF7AC1901F70A73E00AD327C /* triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = triangle.cpp; sourceTree = "<group>"; };
+		EF7AC1911F70A73E00AD327C /* triangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = triangle.hpp; sourceTree = "<group>"; };
+		EF7AC1931F70A9D100AD327C /* base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base.cpp; sourceTree = "<group>"; };
+		EF7AC1941F70A9D100AD327C /* base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = base.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +83,7 @@
 		EF3BF8451F6F774800849CF5 /* LearnOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				EF7AC18C1F70A65300AD327C /* Code */,
 				EF3BF8561F6F97D600849CF5 /* Header */,
 				EF3BF8541F6F976300849CF5 /* Shaders */,
 				EF3BF8551F6F97BB00849CF5 /* Sources */,
@@ -106,7 +114,7 @@
 		EF3BF8551F6F97BB00849CF5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EF3BF99F1F6FC4A000849CF5 /* stb_image.cpp */,
+				EF7AC18F1F70A67800AD327C /* wall.jpg */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -122,6 +130,18 @@
 				EF3BF99E1F6FC3FC00849CF5 /* stb_image.h */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		EF7AC18C1F70A65300AD327C /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				EF7AC18D1F70A67000AD327C /* stb_image.cpp */,
+				EF7AC1901F70A73E00AD327C /* triangle.cpp */,
+				EF7AC1911F70A73E00AD327C /* triangle.hpp */,
+				EF7AC1931F70A9D100AD327C /* base.cpp */,
+				EF7AC1941F70A9D100AD327C /* base.hpp */,
+			);
+			path = Code;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF3BF9A01F6FC4A000849CF5 /* stb_image.cpp in Sources */,
+				EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */,
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
 				EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */,
+				EF7AC1951F70A9D100AD327C /* base.cpp in Sources */,
+				EF7AC1921F70A73E00AD327C /* triangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +315,7 @@
 					/usr/local/Cellar/glfw/3.2.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wno-unused-variable";
 			};
 			name = Debug;
 		};
@@ -310,6 +333,7 @@
 					/usr/local/Cellar/glfw/3.2.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wno-unused-variable";
 			};
 			name = Release;
 		};
