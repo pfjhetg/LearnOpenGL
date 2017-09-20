@@ -42,6 +42,7 @@ void triangle::loadShader() {
     // 绑定顶点数组对象
     glBindVertexArray(VAO);
     
+    
     // 绑定顶点缓冲对象
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     // 缓冲数据:把定点数据复制到缓冲的内存中

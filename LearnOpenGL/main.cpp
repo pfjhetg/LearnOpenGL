@@ -40,8 +40,8 @@ int main() {
         return -1;
     }
     
-    base = new triangle(window);//三角形
-//    base = new textures(window);//纹理
+//    base = new triangle(window);//三角形
+    base = new textures(window);//纹理
     
     // build and compile our shader program
     base->loadShader();

@@ -16,7 +16,7 @@ public:
     GLFWwindow *window;
     Shader *shader;
     unsigned int VBO, VAO, EBO;
-    unsigned int texture;
+    unsigned int texture1, texture2;
     
     base();
     base(GLFWwindow *window);
