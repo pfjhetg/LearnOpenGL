@@ -20,5 +20,9 @@
 #include <sstream>
 #include <iostream>
 
+#include "glm.hpp"
+#include "matrix_transform.hpp"
+#include "type_ptr.hpp"
+
 
 #endif /* learnopengl_h */

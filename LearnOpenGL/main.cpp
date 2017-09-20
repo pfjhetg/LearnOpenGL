@@ -1,6 +1,8 @@
 #include "shader.h"
 #include "triangle.hpp"
 #include "textures.hpp"
+#include "transformations.hpp"
+
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
@@ -41,7 +43,8 @@ int main() {
     }
     
 //    base = new triangle(window);//三角形
-    base = new textures(window);//纹理
+//    base = new textures(window);//纹理
+    base = new transformations(window);//变换
     
     // build and compile our shader program
     base->loadShader();
