@@ -2,14 +2,12 @@
 #include "triangle.hpp"
 #include "textures.hpp"
 #include "transformations.hpp"
+#include "coordinate_systems.hpp"
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 
-// settings
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
 base *base;
 
 int main() {
@@ -44,7 +42,8 @@ int main() {
     
 //    base = new triangle(window);//三角形
 //    base = new textures(window);//纹理
-    base = new transformations(window);//变换
+//    base = new transformations(window);//变换
+    base = new coordinate_systems(window);//坐标系统
     
     // build and compile our shader program
     base->loadShader();

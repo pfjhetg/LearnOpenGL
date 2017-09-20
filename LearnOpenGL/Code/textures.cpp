@@ -72,6 +72,7 @@ void textures::loadShader() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
+    // stb_image.h将会用图像的宽度、高度和颜色通道的个数填充这三个变量
     int width, height, nrChannels;
     // 图像加载时翻转y轴
     stbi_set_flip_vertically_on_load(true);
