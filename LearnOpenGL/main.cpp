@@ -3,6 +3,7 @@
 #include "textures.hpp"
 #include "transformations.hpp"
 #include "coordinate_systems.hpp"
+#include "coordinate_systems_depth.hpp"
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -43,7 +44,8 @@ int main() {
 //    base = new triangle(window);//三角形
 //    base = new textures(window);//纹理
 //    base = new transformations(window);//变换
-    base = new coordinate_systems(window);//坐标系统
+//    base = new coordinate_systems(window);//坐标系统(有bug,无法正常显示结果)
+    base = new coordinate_systems_depth(window);//坐标系统(有bug,无法正常显示结果)
     
     // build and compile our shader program
     base->loadShader();
@@ -54,12 +56,6 @@ int main() {
         // input
         // -----
         processInput(window);
-        
-        // ------
-        // 设置清空屏幕所用的颜色
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        // 清空颜色缓冲
-        glClear(GL_COLOR_BUFFER_BIT);
         
         // render
         base->renderLoop();

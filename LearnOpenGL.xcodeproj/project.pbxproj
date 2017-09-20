@@ -13,6 +13,7 @@
 		EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF9981F6FB65500849CF5 /* glad.c */; };
 		EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5091F723974006F8A9F /* transformations.cpp */; };
 		EF79B5131F724F50006F8A9F /* coordinate_systems.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5111F724F50006F8A9F /* coordinate_systems.cpp */; };
+		EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5141F725824006F8A9F /* coordinate_systems_depth.cpp */; };
 		EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC18D1F70A67000AD327C /* stb_image.cpp */; };
 		EF7AC1921F70A73E00AD327C /* triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1901F70A73E00AD327C /* triangle.cpp */; };
 		EF7AC1951F70A9D100AD327C /* base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1931F70A9D100AD327C /* base.cpp */; };
@@ -305,6 +306,10 @@
 		EF79B5101F724879006F8A9F /* 6.1.coordinate_systems.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 6.1.coordinate_systems.frag; sourceTree = "<group>"; };
 		EF79B5111F724F50006F8A9F /* coordinate_systems.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = coordinate_systems.cpp; sourceTree = "<group>"; };
 		EF79B5121F724F50006F8A9F /* coordinate_systems.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = coordinate_systems.hpp; sourceTree = "<group>"; };
+		EF79B5141F725824006F8A9F /* coordinate_systems_depth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = coordinate_systems_depth.cpp; sourceTree = "<group>"; };
+		EF79B5151F725824006F8A9F /* coordinate_systems_depth.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = coordinate_systems_depth.hpp; sourceTree = "<group>"; };
+		EF79B5171F725853006F8A9F /* 6.2.coordinate_systems.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 6.2.coordinate_systems.vert; sourceTree = "<group>"; };
+		EF79B5181F725863006F8A9F /* 6.2.coordinate_systems.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 6.2.coordinate_systems.frag; sourceTree = "<group>"; };
 		EF7AC18D1F70A67000AD327C /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
 		EF7AC18F1F70A67800AD327C /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
 		EF7AC1901F70A73E00AD327C /* triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = triangle.cpp; sourceTree = "<group>"; };
@@ -381,6 +386,8 @@
 				EF79B5081F7238FA006F8A9F /* 5.1.transform.frag */,
 				EF79B50F1F72486E006F8A9F /* 6.1.coordinate_systems.vert */,
 				EF79B5101F724879006F8A9F /* 6.1.coordinate_systems.frag */,
+				EF79B5171F725853006F8A9F /* 6.2.coordinate_systems.vert */,
+				EF79B5181F725863006F8A9F /* 6.2.coordinate_systems.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -705,6 +712,8 @@
 				EF79B50A1F723974006F8A9F /* transformations.hpp */,
 				EF79B5111F724F50006F8A9F /* coordinate_systems.cpp */,
 				EF79B5121F724F50006F8A9F /* coordinate_systems.hpp */,
+				EF79B5141F725824006F8A9F /* coordinate_systems_depth.cpp */,
+				EF79B5151F725824006F8A9F /* coordinate_systems_depth.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -768,6 +777,7 @@
 			files = (
 				EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */,
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
+				EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */,
 				EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */,
 				EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */,
 				EF7AC1951F70A9D100AD327C /* base.cpp in Sources */,

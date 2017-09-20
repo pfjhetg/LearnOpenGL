@@ -130,6 +130,11 @@ void textures::loadShader() {
 }
 
 void textures::renderLoop() {
+    // ------
+    // 设置清空屏幕所用的颜色
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    // 清空颜色缓冲
+    glClear(GL_COLOR_BUFFER_BIT);
     // glActiveTexture激活纹理单元，传入我们需要使用的纹理单元
     // OpenGL至少保证有16个纹理单元供你使用，也就是说你可以激活从GL_TEXTURE0到GL_TEXTRUE15。它们都是按顺序定义的，所以我们也可以通过GL_TEXTURE0 + 8的方式获得GL_TEXTURE8，这在当我们需要循环一些纹理单元的时候会很有用
     glActiveTexture(GL_TEXTURE0);

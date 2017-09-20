@@ -95,6 +95,11 @@ void coordinate_systems::loadShader() {
 }
 
 void coordinate_systems::renderLoop() {
+    // ------
+    // 设置清空屏幕所用的颜色
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    // 清空颜色缓冲
+    glClear(GL_COLOR_BUFFER_BIT);
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture1);
     glActiveTexture(GL_TEXTURE1);
