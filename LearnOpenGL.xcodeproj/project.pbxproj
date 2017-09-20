@@ -310,6 +310,7 @@
 		EF79B5151F725824006F8A9F /* coordinate_systems_depth.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = coordinate_systems_depth.hpp; sourceTree = "<group>"; };
 		EF79B5171F725853006F8A9F /* 6.2.coordinate_systems.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 6.2.coordinate_systems.vert; sourceTree = "<group>"; };
 		EF79B5181F725863006F8A9F /* 6.2.coordinate_systems.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 6.2.coordinate_systems.frag; sourceTree = "<group>"; };
+		EF79B5191F7260C9006F8A9F /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
 		EF7AC18D1F70A67000AD327C /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
 		EF7AC18F1F70A67800AD327C /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
 		EF7AC1901F70A73E00AD327C /* triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = triangle.cpp; sourceTree = "<group>"; };
@@ -395,6 +396,7 @@
 		EF3BF8551F6F97BB00849CF5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EF79B5191F7260C9006F8A9F /* container.jpg */,
 				EF7AC1961F70C24500AD327C /* awesomeface.png */,
 				EF7AC18F1F70A67800AD327C /* wall.jpg */,
 			);

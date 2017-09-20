@@ -76,7 +76,7 @@ void textures::loadShader() {
     int width, height, nrChannels;
     // 图像加载时翻转y轴
     stbi_set_flip_vertically_on_load(true);
-    unsigned char *data = stbi_load("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/wall.jpg", &width, &height, &nrChannels, 0);
+    unsigned char *data = stbi_load("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/container.jpg", &width, &height, &nrChannels, 0);
     if (data) {
         // 当调用glTexImage2D时，当前绑定的纹理对象就会被附加上纹理图像。
         // 第一个参数指定了纹理目标(Target)。设置为GL_TEXTURE_2D意味着会生成与当前绑定的纹理对象在同一个目标上的纹理（任何绑定到GL_TEXTURE_1D和GL_TEXTURE_3D的纹理不会受到影响）。
