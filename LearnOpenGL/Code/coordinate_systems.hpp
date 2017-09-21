@@ -13,7 +13,6 @@
 
 class coordinate_systems: public base {
 public:
-    coordinate_systems();
     coordinate_systems(GLFWwindow *window);
     void loadShader();
     void renderLoop();

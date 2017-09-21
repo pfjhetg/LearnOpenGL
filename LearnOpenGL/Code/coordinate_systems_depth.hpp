@@ -13,7 +13,6 @@
 
 class coordinate_systems_depth: public base {
 public:
-    coordinate_systems_depth();
     coordinate_systems_depth(GLFWwindow *window);
     void loadShader();
     void renderLoop();

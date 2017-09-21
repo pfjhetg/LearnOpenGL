@@ -13,7 +13,6 @@
 
 class triangle: public base {
 public:
-    triangle();
     triangle(GLFWwindow *window);
     void loadShader();
 };

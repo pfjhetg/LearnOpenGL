@@ -8,10 +8,6 @@
 
 #include "transformations.hpp"
 
-transformations::transformations() {
-    
-}
-
 transformations::transformations(GLFWwindow *window) {
     this->window = window;
 }

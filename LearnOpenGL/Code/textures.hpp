@@ -13,7 +13,6 @@
 
 class textures: public base {
 public:
-    textures();
     textures(GLFWwindow *window);
     virtual void loadShader();
     virtual void renderLoop();

@@ -13,7 +13,6 @@
 
 class camera_circle: public base {
 public:
-    camera_circle();
     camera_circle(GLFWwindow *window);
     void loadShader();
     void renderLoop();

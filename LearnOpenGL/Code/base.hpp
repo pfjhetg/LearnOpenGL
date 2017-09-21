@@ -15,6 +15,7 @@ class base {
 public:
     GLFWwindow *window;
     Shader *shader;
+    Camera *camera;
     unsigned int VBO, VAO, EBO;
     unsigned int texture1, texture2;
     

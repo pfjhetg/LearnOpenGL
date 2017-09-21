@@ -9,7 +9,9 @@
 #ifndef camera_h
 #define camera_h
 
-#include <vector>
+#include "glm.hpp"
+#include "matrix_transform.hpp"
+#include "type_ptr.hpp"
 
 // Defines several possible options for camera movement. Used as abstraction to stay away from window-system specific input methods
 enum Camera_Movement {

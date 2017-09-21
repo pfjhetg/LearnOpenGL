@@ -8,10 +8,6 @@
 
 #include "coordinate_systems.hpp"
 
-coordinate_systems::coordinate_systems() {
-    
-}
-
 coordinate_systems::coordinate_systems(GLFWwindow *window) {
     this->window = window;
 }

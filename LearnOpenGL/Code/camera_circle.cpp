@@ -8,9 +8,6 @@
 
 #include "camera_circle.hpp"
 
-camera_circle::camera_circle() {
-    
-}
 
 camera_circle::camera_circle(GLFWwindow *window) {
     this->window = window;

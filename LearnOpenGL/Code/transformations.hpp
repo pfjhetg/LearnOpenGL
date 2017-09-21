@@ -13,7 +13,6 @@
 
 class transformations: public base {
 public:
-    transformations();
     transformations(GLFWwindow *window);
     virtual void loadShader();
     virtual void renderLoop();

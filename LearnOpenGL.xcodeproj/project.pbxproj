@@ -12,6 +12,7 @@
 		EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */; };
 		EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF9981F6FB65500849CF5 /* glad.c */; };
 		EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF40558C1F7351C100B15A8A /* camera_circle.cpp */; };
+		EF40559B1F738DAF00B15A8A /* colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4055991F738DAF00B15A8A /* colors.cpp */; };
 		EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5091F723974006F8A9F /* transformations.cpp */; };
 		EF79B5131F724F50006F8A9F /* coordinate_systems.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5111F724F50006F8A9F /* coordinate_systems.cpp */; };
 		EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5141F725824006F8A9F /* coordinate_systems_depth.cpp */; };
@@ -52,6 +53,12 @@
 		EF40558F1F73540700B15A8A /* 7.1.camera.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 7.1.camera.vert; sourceTree = "<group>"; };
 		EF4055901F73541000B15A8A /* 7.1.camera.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 7.1.camera.frag; sourceTree = "<group>"; };
 		EF4055911F735E8F00B15A8A /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
+		EF4055951F73872300B15A8A /* 1.colors.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 1.colors.vert; sourceTree = "<group>"; };
+		EF4055961F73872B00B15A8A /* 1.colors.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 1.colors.frag; sourceTree = "<group>"; };
+		EF4055971F73875700B15A8A /* 1.lamp.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 1.lamp.vert; sourceTree = "<group>"; };
+		EF4055981F73875F00B15A8A /* 1.lamp.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 1.lamp.frag; sourceTree = "<group>"; };
+		EF4055991F738DAF00B15A8A /* colors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colors.cpp; sourceTree = "<group>"; };
+		EF40559A1F738DAF00B15A8A /* colors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = colors.hpp; sourceTree = "<group>"; };
 		EF79B4081F72190A006F8A9F /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		EF79B4091F72190A006F8A9F /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
 		EF79B40B1F72190A006F8A9F /* _features.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = _features.hpp; sourceTree = "<group>"; };
@@ -397,6 +404,10 @@
 				EF79B5181F725863006F8A9F /* 6.2.coordinate_systems.frag */,
 				EF40558F1F73540700B15A8A /* 7.1.camera.vert */,
 				EF4055901F73541000B15A8A /* 7.1.camera.frag */,
+				EF4055951F73872300B15A8A /* 1.colors.vert */,
+				EF4055961F73872B00B15A8A /* 1.colors.frag */,
+				EF4055971F73875700B15A8A /* 1.lamp.vert */,
+				EF4055981F73875F00B15A8A /* 1.lamp.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -727,6 +738,8 @@
 				EF79B5151F725824006F8A9F /* coordinate_systems_depth.hpp */,
 				EF40558C1F7351C100B15A8A /* camera_circle.cpp */,
 				EF40558D1F7351C100B15A8A /* camera_circle.hpp */,
+				EF4055991F738DAF00B15A8A /* colors.cpp */,
+				EF40559A1F738DAF00B15A8A /* colors.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -798,6 +811,7 @@
 				EF7AC1921F70A73E00AD327C /* triangle.cpp in Sources */,
 				EF79B5131F724F50006F8A9F /* coordinate_systems.cpp in Sources */,
 				EF7AC1991F70C44A00AD327C /* textures.cpp in Sources */,
+				EF40559B1F738DAF00B15A8A /* colors.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

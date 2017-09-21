@@ -14,6 +14,7 @@
 #include <GLFW/glfw3.h>
 
 #include "stb_image.h"
+#include "camera.h"
 
 #include <string>
 #include <fstream>
@@ -23,6 +24,8 @@
 #include "glm.hpp"
 #include "matrix_transform.hpp"
 #include "type_ptr.hpp"
+
+
 
 // settings
 const unsigned int SCR_WIDTH = 800;

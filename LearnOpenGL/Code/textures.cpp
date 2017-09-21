@@ -8,10 +8,6 @@
 
 #include "textures.hpp"
 
-textures::textures() {
-    
-}
-
 textures::textures(GLFWwindow *window) {
    this->window = window;
 }

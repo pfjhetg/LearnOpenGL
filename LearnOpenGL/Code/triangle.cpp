@@ -8,10 +8,6 @@
 
 #include "triangle.hpp"
 
-triangle::triangle() {
-    
-}
-
 triangle::triangle(GLFWwindow *window) {
     this->window = window;
 }
