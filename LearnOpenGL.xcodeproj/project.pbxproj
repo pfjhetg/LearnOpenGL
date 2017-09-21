@@ -51,6 +51,7 @@
 		EF40558D1F7351C100B15A8A /* camera_circle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = camera_circle.hpp; sourceTree = "<group>"; };
 		EF40558F1F73540700B15A8A /* 7.1.camera.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 7.1.camera.vert; sourceTree = "<group>"; };
 		EF4055901F73541000B15A8A /* 7.1.camera.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 7.1.camera.frag; sourceTree = "<group>"; };
+		EF4055911F735E8F00B15A8A /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
 		EF79B4081F72190A006F8A9F /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		EF79B4091F72190A006F8A9F /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
 		EF79B40B1F72190A006F8A9F /* _features.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = _features.hpp; sourceTree = "<group>"; };
@@ -420,6 +421,7 @@
 				EF3BF9941F6FAFEB00849CF5 /* learnopengl.h */,
 				EF3BF9951F6FAFEB00849CF5 /* shader.h */,
 				EF3BF99E1F6FC3FC00849CF5 /* stb_image.h */,
+				EF4055911F735E8F00B15A8A /* camera.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";

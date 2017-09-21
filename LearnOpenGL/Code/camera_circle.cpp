@@ -126,7 +126,8 @@ void camera_circle::loadShader() {
     this->shader->setInt("texture1", 0);
     this->shader->setInt("texture2", 1);
     
-    glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 1000.0f);
+    //这里的远处值得大小会影响看到的视野,如果视野有问题,可以调整这个参数
+    glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 10000.0f);
     this->shader->setMat4("projection", projection);
     
 }
