@@ -44,8 +44,8 @@ int main() {
 //    base = new triangle(window);//三角形
 //    base = new textures(window);//纹理
 //    base = new transformations(window);//变换
-//    base = new coordinate_systems(window);//坐标系统(有bug,无法正常显示结果)
-    base = new coordinate_systems_depth(window);//坐标系统(有bug,无法正常显示结果)
+//    base = new coordinate_systems(window);//坐标系统
+    base = new coordinate_systems_depth(window);//坐标系统,Zbuff
     
     // build and compile our shader program
     base->loadShader();

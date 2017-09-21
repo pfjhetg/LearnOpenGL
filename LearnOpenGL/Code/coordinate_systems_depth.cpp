@@ -145,9 +145,9 @@ void coordinate_systems_depth::renderLoop() {
     glm::mat4 model;
     glm::mat4 view;
     glm::mat4 projection;
-    model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.5f, 1.0f, 0.0f));
-    view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-    projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+    model = glm::rotate(model, (float)glfwGetTime() * 50, glm::vec3(0.5f, 1.0f, 0.0f));
+    view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -100.0f));
+    projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 1000.0f);
     // retrieve the matrix uniform locations
     unsigned int modelLoc = glGetUniformLocation(this->shader->ID, "model");
     unsigned int viewLoc  = glGetUniformLocation(this->shader->ID, "view");

@@ -61,13 +61,10 @@ void transformations::loadShader() {
     int width, height, nrChannels;
     stbi_set_flip_vertically_on_load(true); // tell stb_image.h to flip loaded texture's on the y-axis.
     unsigned char *data = stbi_load("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/container.jpg", &width, &height, &nrChannels, 0);
-    if (data)
-    {
+    if (data) {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
-    }
-    else
-    {
+    } else {
         std::cout << "Failed to load texture" << std::endl;
     }
     stbi_image_free(data);
@@ -83,14 +80,11 @@ void transformations::loadShader() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     // load image, create texture and generate mipmaps
     data = stbi_load("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/awesomeface.png", &width, &height, &nrChannels, 0);
-    if (data)
-    {
+    if (data) {
         // note that the awesomeface.png has transparency and thus an alpha channel, so make sure to tell OpenGL the data type is of GL_RGBA
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
-    }
-    else
-    {
+    } else {
         std::cout << "Failed to load texture" << std::endl;
     }
     stbi_image_free(data);
