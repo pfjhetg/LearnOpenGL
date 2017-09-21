@@ -11,6 +11,7 @@
 		EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */; };
 		EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */; };
 		EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF9981F6FB65500849CF5 /* glad.c */; };
+		EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF40558C1F7351C100B15A8A /* camera_circle.cpp */; };
 		EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5091F723974006F8A9F /* transformations.cpp */; };
 		EF79B5131F724F50006F8A9F /* coordinate_systems.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5111F724F50006F8A9F /* coordinate_systems.cpp */; };
 		EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5141F725824006F8A9F /* coordinate_systems_depth.cpp */; };
@@ -46,6 +47,10 @@
 		EF3BF9991F6FB65500849CF5 /* glad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
 		EF3BF99A1F6FB65500849CF5 /* khrplatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
 		EF3BF99E1F6FC3FC00849CF5 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		EF40558C1F7351C100B15A8A /* camera_circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = camera_circle.cpp; sourceTree = "<group>"; };
+		EF40558D1F7351C100B15A8A /* camera_circle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = camera_circle.hpp; sourceTree = "<group>"; };
+		EF40558F1F73540700B15A8A /* 7.1.camera.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 7.1.camera.vert; sourceTree = "<group>"; };
+		EF4055901F73541000B15A8A /* 7.1.camera.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 7.1.camera.frag; sourceTree = "<group>"; };
 		EF79B4081F72190A006F8A9F /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		EF79B4091F72190A006F8A9F /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
 		EF79B40B1F72190A006F8A9F /* _features.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = _features.hpp; sourceTree = "<group>"; };
@@ -389,6 +394,8 @@
 				EF79B5101F724879006F8A9F /* 6.1.coordinate_systems.frag */,
 				EF79B5171F725853006F8A9F /* 6.2.coordinate_systems.vert */,
 				EF79B5181F725863006F8A9F /* 6.2.coordinate_systems.frag */,
+				EF40558F1F73540700B15A8A /* 7.1.camera.vert */,
+				EF4055901F73541000B15A8A /* 7.1.camera.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -716,6 +723,8 @@
 				EF79B5121F724F50006F8A9F /* coordinate_systems.hpp */,
 				EF79B5141F725824006F8A9F /* coordinate_systems_depth.cpp */,
 				EF79B5151F725824006F8A9F /* coordinate_systems_depth.hpp */,
+				EF40558C1F7351C100B15A8A /* camera_circle.cpp */,
+				EF40558D1F7351C100B15A8A /* camera_circle.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -777,6 +786,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */,
 				EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */,
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
 				EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */,
