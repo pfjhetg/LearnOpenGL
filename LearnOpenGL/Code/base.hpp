@@ -24,6 +24,7 @@ public:
     virtual void loadShader();
     virtual void renderLoop();
     virtual void deallocate();
+    virtual unsigned int loadTexture(char *path);
     
 };
 

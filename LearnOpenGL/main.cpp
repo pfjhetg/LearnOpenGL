@@ -8,6 +8,7 @@
 #include "colors.hpp"
 #include "basic_lighting_specular.hpp"
 #include "materials.hpp"
+#include "lighting_maps_diffuse.hpp"
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -53,7 +54,8 @@ int main() {
 //    base = new camera_circle(window);//摄像机
 //    base = new colors(window);//颜色//有bug,去掉鼠标,键盘的处理,用漫游替换
 //    base = new basic_lighting_specular(window);//基础光照,有bug,去掉鼠标,键盘的处理,用漫游替换
-    base = new materials(window);//基础光照,有bug,去掉鼠标,键盘的处理,用漫游替换
+//    base = new materials(window);//基础光照,有bug,去掉鼠标,键盘的处理,用漫游替换
+    base = new lighting_maps_diffuse(window);//基础光照,有bug,去掉鼠标,键盘的处理,用漫游替换
     
     // build and compile our shader program
     base->loadShader();
