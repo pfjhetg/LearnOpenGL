@@ -16,9 +16,6 @@ colors::colors(GLFWwindow *window) {
 }
 
 void colors::loadShader() {
-    // TODO :No matching function for call to 'glfwSetCursorPosCallback' 暂未解决
-//    glfwSetCursorPosCallback(this->window, &colors::mouse_callback);
-//    glfwSetScrollCallback(this->window, &colors::scroll_callback);
     
     float vertices[] = {
         -0.5f, -0.5f, -0.5f,
@@ -112,13 +109,34 @@ void colors::renderLoop() {
     this->lightingShader->setVec3("objectColor", 1.0f, 0.5f, 0.31f);
     this->lightingShader->setVec3("lightColor", 1.0f, 1.0f, 1.0f);
     
-    glm::mat4 projection = glm::perspective(glm::radians(this->camera->Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-    glm::mat4 view = this->camera->GetViewMatrix();
-    this->lightingShader->setMat4("projection", projection);
-    this->lightingShader->setMat4("view", view);
-    
+    // 用自己选择, 替换原有代码
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< HEAD
+    // 这是新代码
     glm::mat4 model;
-    this->lightingShader->setMat4("model", model);
+    glm::mat4 view;
+    glm::mat4 projection;
+    model = glm::rotate(model, (float)glfwGetTime() * 50, glm::vec3(0.5f, 1.0f, 0.0f));
+    view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -200.0f));
+    projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 1000.0f);
+    // retrieve the matrix uniform locations
+    unsigned int modelLoc = glGetUniformLocation(this->lightingShader->ID, "model");
+    unsigned int viewLoc  = glGetUniformLocation(this->lightingShader->ID, "view");
+    // pass them to the shaders (3 different ways)
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
+    // note: currently we set the projection matrix each frame, but since the projection matrix rarely changes it's often best practice to set it outside the main loop only once.
+    this->lightingShader->setMat4("projection", projection);
+    // ================================
+    // 这部分是教程原有的代码
+//    glm::mat4 projection = glm::perspective(glm::radians(this->camera->Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+//    glm::mat4 view = this->camera->GetViewMatrix();
+//    this->lightingShader->setMat4("projection", projection);
+//    this->lightingShader->setMat4("view", view);
+//    
+//    glm::mat4 model;
+//    this->lightingShader->setMat4("model", model);
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+   
     // 当我们打算绘制一个物体的时候，我们要在绘制物体前简单地把VAO绑定到希望使用的设定上
     glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -145,26 +163,6 @@ void colors::deallocate() {
     glDeleteVertexArrays(1, &cubeVAO);
     glDeleteVertexArrays(1, &lightVAO);
     glDeleteBuffers(1, &VBO);
-}
-
-void colors::mouse_callback(GLFWwindow *window, double xpos, double ypos) {
-    if (firstMouse) {
-        lastX = xpos;
-        lastY = ypos;
-        firstMouse = false;
-    }
-    
-    float xoffset = xpos - lastX;
-    float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
-    
-    lastX = xpos;
-    lastY = ypos;
-
-    camera->ProcessMouseMovement(xoffset, yoffset);
-}
-
-void colors::scroll_callback(GLFWwindow *window, double xoffset, double yoffset) {
-    camera->ProcessMouseScroll(yoffset);
 }
 
 

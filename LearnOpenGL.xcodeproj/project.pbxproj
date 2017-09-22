@@ -42,6 +42,10 @@
 		EF261CFC1F74BC3500C6FA2B /* 2.2.basic_lighting.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.frag; sourceTree = "<group>"; };
 		EF261CFD1F74BCDF00C6FA2B /* basic_lighting_specular.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = basic_lighting_specular.cpp; sourceTree = "<group>"; };
 		EF261CFE1F74BCDF00C6FA2B /* basic_lighting_specular.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = basic_lighting_specular.hpp; sourceTree = "<group>"; };
+		EF261D001F74E0F000C6FA2B /* 3.1.materials.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.materials.vert; sourceTree = "<group>"; };
+		EF261D011F74E0F900C6FA2B /* 3.1.materials.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.materials.frag; sourceTree = "<group>"; };
+		EF261D021F74E10600C6FA2B /* 3.1.lamp.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.lamp.vert; sourceTree = "<group>"; };
+		EF261D031F74E10E00C6FA2B /* 3.1.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.lamp.frag; sourceTree = "<group>"; };
 		EF3BF8431F6F774800849CF5 /* LearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3BF8461F6F774800849CF5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -419,6 +423,10 @@
 				EF261CFA1F74BC1200C6FA2B /* 2.2.lamp.frag */,
 				EF261CFB1F74BC2C00C6FA2B /* 2.2.basic_lighting.vert */,
 				EF261CFC1F74BC3500C6FA2B /* 2.2.basic_lighting.frag */,
+				EF261D001F74E0F000C6FA2B /* 3.1.materials.vert */,
+				EF261D011F74E0F900C6FA2B /* 3.1.materials.frag */,
+				EF261D021F74E10600C6FA2B /* 3.1.lamp.vert */,
+				EF261D031F74E10E00C6FA2B /* 3.1.lamp.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";

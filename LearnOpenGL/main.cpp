@@ -50,8 +50,8 @@ int main() {
 //    base = new coordinate_systems(window);//坐标系统
 //    base = new coordinate_systems_depth(window);//坐标系统,Zbuff
 //    base = new camera_circle(window);//摄像机
-//    base = new colors(window);//颜色//有bug,暂未解决
-    base = new basic_lighting_specular(window);//基础光照
+//    base = new colors(window);//颜色//有bug,去掉鼠标,键盘的处理,用漫游替换
+    base = new basic_lighting_specular(window);//基础光照,有bug,去掉鼠标,键盘的处理,用漫游替换
     
     // build and compile our shader program
     base->loadShader();

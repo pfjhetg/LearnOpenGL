@@ -20,8 +20,6 @@ public:
     void loadShader();
     void renderLoop();
     void deallocate();
-    void mouse_callback(GLFWwindow *window, double xpos, double ypos);
-    void scroll_callback(GLFWwindow *window, double xoffset, double yoffset);
 };
 
 #endif /* basic_lighting_specular_hpp */
