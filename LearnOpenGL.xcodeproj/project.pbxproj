@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF261CFD1F74BCDF00C6FA2B /* basic_lighting_specular.cpp */; };
 		EF3BF8471F6F774800849CF5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF8461F6F774800849CF5 /* main.cpp */; };
 		EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */; };
 		EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */; };
@@ -35,6 +36,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EF261CF91F74BC0B00C6FA2B /* 2.2.lamp.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.vert; sourceTree = "<group>"; };
+		EF261CFA1F74BC1200C6FA2B /* 2.2.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.frag; sourceTree = "<group>"; };
+		EF261CFB1F74BC2C00C6FA2B /* 2.2.basic_lighting.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.vert; sourceTree = "<group>"; };
+		EF261CFC1F74BC3500C6FA2B /* 2.2.basic_lighting.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.frag; sourceTree = "<group>"; };
+		EF261CFD1F74BCDF00C6FA2B /* basic_lighting_specular.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = basic_lighting_specular.cpp; sourceTree = "<group>"; };
+		EF261CFE1F74BCDF00C6FA2B /* basic_lighting_specular.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = basic_lighting_specular.hpp; sourceTree = "<group>"; };
 		EF3BF8431F6F774800849CF5 /* LearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3BF8461F6F774800849CF5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -408,6 +415,10 @@
 				EF4055961F73872B00B15A8A /* 1.colors.frag */,
 				EF4055971F73875700B15A8A /* 1.lamp.vert */,
 				EF4055981F73875F00B15A8A /* 1.lamp.frag */,
+				EF261CF91F74BC0B00C6FA2B /* 2.2.lamp.vert */,
+				EF261CFA1F74BC1200C6FA2B /* 2.2.lamp.frag */,
+				EF261CFB1F74BC2C00C6FA2B /* 2.2.basic_lighting.vert */,
+				EF261CFC1F74BC3500C6FA2B /* 2.2.basic_lighting.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -740,6 +751,8 @@
 				EF40558D1F7351C100B15A8A /* camera_circle.hpp */,
 				EF4055991F738DAF00B15A8A /* colors.cpp */,
 				EF40559A1F738DAF00B15A8A /* colors.hpp */,
+				EF261CFD1F74BCDF00C6FA2B /* basic_lighting_specular.cpp */,
+				EF261CFE1F74BCDF00C6FA2B /* basic_lighting_specular.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -802,6 +815,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */,
+				EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */,
 				EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */,
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
 				EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */,

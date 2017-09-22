@@ -8,18 +8,6 @@
 
 #include "colors.hpp"
 
-
-float lastX = SCR_WIDTH / 2.0f;
-float lastY = SCR_HEIGHT / 2.0f;
-bool firstMouse = true;
-
-// timing
-float deltaTime = 0.0f;
-float lastFrame = 0.0f;
-
-// lighting
-glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
-
 colors::colors(GLFWwindow *window) {
     this->lightingShader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/1.colors.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/1.colors.frag");
     this->lampShader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/1.lamp.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/1.lamp.frag");
@@ -141,7 +129,7 @@ void colors::renderLoop() {
     model = glm::mat4();
     model = glm::translate(model, lightPos);
     // 缩小的cube
-    model = glm::scale(model, glm:: vec3(0.2f));
+    model = glm::scale(model, glm::vec3(0.2f));
     this->lampShader->setMat4("model", model);
     
     glBindVertexArray(lightVAO);

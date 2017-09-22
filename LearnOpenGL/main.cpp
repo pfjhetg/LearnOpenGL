@@ -6,6 +6,7 @@
 #include "coordinate_systems_depth.hpp"
 #include "camera_circle.hpp"
 #include "colors.hpp"
+#include "basic_lighting_specular.hpp"
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -49,7 +50,8 @@ int main() {
 //    base = new coordinate_systems(window);//坐标系统
 //    base = new coordinate_systems_depth(window);//坐标系统,Zbuff
 //    base = new camera_circle(window);//摄像机
-    base = new colors(window);//颜色//有bug,暂未解决
+//    base = new colors(window);//颜色//有bug,暂未解决
+    base = new basic_lighting_specular(window);//基础光照
     
     // build and compile our shader program
     base->loadShader();
