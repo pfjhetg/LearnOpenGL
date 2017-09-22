@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF261CFD1F74BCDF00C6FA2B /* basic_lighting_specular.cpp */; };
+		EF261D061F74F4BA00C6FA2B /* materials.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF261D041F74F4BA00C6FA2B /* materials.cpp */; };
 		EF3BF8471F6F774800849CF5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF8461F6F774800849CF5 /* main.cpp */; };
 		EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */; };
 		EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */; };
@@ -46,6 +47,8 @@
 		EF261D011F74E0F900C6FA2B /* 3.1.materials.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.materials.frag; sourceTree = "<group>"; };
 		EF261D021F74E10600C6FA2B /* 3.1.lamp.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.lamp.vert; sourceTree = "<group>"; };
 		EF261D031F74E10E00C6FA2B /* 3.1.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.1.lamp.frag; sourceTree = "<group>"; };
+		EF261D041F74F4BA00C6FA2B /* materials.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = materials.cpp; sourceTree = "<group>"; };
+		EF261D051F74F4BA00C6FA2B /* materials.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = materials.hpp; sourceTree = "<group>"; };
 		EF3BF8431F6F774800849CF5 /* LearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3BF8461F6F774800849CF5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -761,6 +764,8 @@
 				EF40559A1F738DAF00B15A8A /* colors.hpp */,
 				EF261CFD1F74BCDF00C6FA2B /* basic_lighting_specular.cpp */,
 				EF261CFE1F74BCDF00C6FA2B /* basic_lighting_specular.hpp */,
+				EF261D041F74F4BA00C6FA2B /* materials.cpp */,
+				EF261D051F74F4BA00C6FA2B /* materials.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -825,6 +830,7 @@
 				EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */,
 				EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */,
 				EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */,
+				EF261D061F74F4BA00C6FA2B /* materials.cpp in Sources */,
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
 				EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */,
 				EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */,

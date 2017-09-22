@@ -1,21 +1,21 @@
 //
-//  basic_lighting_specular.cpp
+//  materials.cpp
 //  LearnOpenGL
 //
 //  Created by pfjhetg on 2017/9/22.
 //  Copyright © 2017年 pfjhetg. All rights reserved.
 //
 
-#include "basic_lighting_specular.hpp"
+#include "materials.hpp"
 
-basic_lighting_specular::basic_lighting_specular(GLFWwindow *window) {
+materials::materials(GLFWwindow *window) {
     this->window = window;
     this->camera = new Camera(glm::vec3(0.5f, 0.5f, 100.0f));
 }
 
-void basic_lighting_specular::loadShader() {
-    this->lightingShader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/2.2.basic_lighting.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/2.2.basic_lighting.frag");
-    this->lampShader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/2.2.lamp.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/2.2.lamp.frag");
+void materials::loadShader() {
+    this->lightingShader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.1.materials.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.1.materials.frag");
+    this->lampShader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.1.lamp.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.1.lamp.frag");
     
     float vertices[] = {
         -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
@@ -60,7 +60,6 @@ void basic_lighting_specular::loadShader() {
         -0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
         -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
     };
-    
     glGenVertexArrays(1, &cubeVAO);
     glGenBuffers(1, &VBO);
     
@@ -69,15 +68,18 @@ void basic_lighting_specular::loadShader() {
     
     glBindVertexArray(cubeVAO);
     
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)0);
+    // position attribute
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-    
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FLOAT, 6 * sizeof(float), (void *)(3 * sizeof(float)));
+    // normal attribute
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
+    
     
     glGenVertexArrays(1, &lightVAO);
     glBindVertexArray(lightVAO);
     
+    //两个地方用的都是同一个VBO里面的数据
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     // note that we update the lamp's position attribute's stride to reflect the updated buffer data
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
@@ -85,9 +87,8 @@ void basic_lighting_specular::loadShader() {
     
 }
 
-void basic_lighting_specular::renderLoop() {
-    
-    // ------
+void materials::renderLoop() {
+    // --------------------
     float currentFrame = glfwGetTime();
     deltaTime = currentFrame - lastFrame;
     lastFrame = currentFrame;
@@ -95,13 +96,28 @@ void basic_lighting_specular::renderLoop() {
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     // 清空颜色缓冲
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    
-    // render the triangle
+    // render
     this->lightingShader->use();
-    this->lightingShader->setVec3("objectColor", 1.0f, 0.5f, 0.31f);
-    this->lightingShader->setVec3("lightColor", 1.0f, 1.0f, 1.0f);
-    this->lightingShader->setVec3("lightPos", lightPos);
+    this->lightingShader->setVec3("light.position", lightPos);
     this->lightingShader->setVec3("viewPos", this->camera->Position);
+    
+    // light properties
+    glm::vec3 lightColor;
+    lightColor.x = sin(glfwGetTime() * 2.0f);
+    lightColor.y = sin(glfwGetTime() * 0.7f);
+    lightColor.z = sin(glfwGetTime() * 1.3f);
+    glm::vec3 diffuseColor = lightColor   * glm::vec3(0.5f); // decrease the influence
+    glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f); // low influence
+    this->lightingShader->setVec3("light.ambient", ambientColor);
+    this->lightingShader->setVec3("light.diffuse", diffuseColor);
+    this->lightingShader->setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+    
+    // material properties
+    this->lightingShader->setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
+    this->lightingShader->setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
+    this->lightingShader->setVec3("material.specular", 0.5f, 0.5f, 0.5f); // specular lighting doesn't have full effect on this object's material
+    this->lightingShader->setFloat("material.shininess", 32.0f);
+    
     // 用自己选择, 替换原有代码
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< HEAD
     // 这是新代码
@@ -126,14 +142,18 @@ void basic_lighting_specular::renderLoop() {
 //    this->lightingShader->setMat4("projection", projection);
 //    this->lightingShader->setMat4("view", view);
 //    
+//    // world transformation
 //    glm::mat4 model;
 //    this->lightingShader->setMat4("model", model);
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-   
+  
+    
     // render the cube
     glBindVertexArray(cubeVAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
     
+    
+    // also draw the lamp object
     this->lampShader->use();
     this->lampShader->setMat4("projection", projection);
     this->lampShader->setMat4("view", view);
@@ -151,9 +171,8 @@ void basic_lighting_specular::renderLoop() {
     glfwPollEvents();
 }
 
-void basic_lighting_specular::deallocate() {
+void materials::deallocate() {
     glDeleteVertexArrays(1, &cubeVAO);
     glDeleteVertexArrays(1, &lightVAO);
     glDeleteBuffers(1, &VBO);
 }
-
