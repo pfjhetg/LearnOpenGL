@@ -9,7 +9,7 @@
 #include "base.hpp"
 
 base::base() {
-    
+    this->camera = new Camera(glm::vec3(0.5f, 0.5f, 100.0f));
 }
 
 base::base(GLFWwindow *window) {
