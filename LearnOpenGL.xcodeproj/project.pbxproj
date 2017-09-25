@@ -24,6 +24,7 @@
 		EF7AC1951F70A9D100AD327C /* base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1931F70A9D100AD327C /* base.cpp */; };
 		EF7AC1991F70C44A00AD327C /* textures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1971F70C44A00AD327C /* textures.cpp */; };
 		EFB02EC81F788C86007CBE0E /* lighting_maps_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02EC61F788C86007CBE0E /* lighting_maps_specular.cpp */; };
+		EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ECD1F78A282007CBE0E /* light_casters_directional.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -365,6 +366,12 @@
 		EFB02ECA1F788CF9007CBE0E /* 4.2.lighting_maps.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.2.lighting_maps.frag; sourceTree = "<group>"; };
 		EFB02ECB1F788D20007CBE0E /* 4.2.lamp.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.2.lamp.vert; sourceTree = "<group>"; };
 		EFB02ECC1F788D28007CBE0E /* 4.2.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.2.lamp.frag; sourceTree = "<group>"; };
+		EFB02ECD1F78A282007CBE0E /* light_casters_directional.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = light_casters_directional.cpp; sourceTree = "<group>"; };
+		EFB02ECE1F78A282007CBE0E /* light_casters_directional.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = light_casters_directional.hpp; sourceTree = "<group>"; };
+		EFB02ED01F78A299007CBE0E /* 5.1.light_casters.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.light_casters.vert; sourceTree = "<group>"; };
+		EFB02ED11F78A2A4007CBE0E /* 5.1.light_casters.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.light_casters.frag; sourceTree = "<group>"; };
+		EFB02ED21F78A2EB007CBE0E /* 5.1.lamp.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.lamp.vert; sourceTree = "<group>"; };
+		EFB02ED31F78A2F2007CBE0E /* 5.1.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.lamp.frag; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +461,10 @@
 				EFB02ECA1F788CF9007CBE0E /* 4.2.lighting_maps.frag */,
 				EFB02ECB1F788D20007CBE0E /* 4.2.lamp.vert */,
 				EFB02ECC1F788D28007CBE0E /* 4.2.lamp.frag */,
+				EFB02ED01F78A299007CBE0E /* 5.1.light_casters.vert */,
+				EFB02ED11F78A2A4007CBE0E /* 5.1.light_casters.frag */,
+				EFB02ED21F78A2EB007CBE0E /* 5.1.lamp.vert */,
+				EFB02ED31F78A2F2007CBE0E /* 5.1.lamp.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -796,6 +807,8 @@
 				EF261D0D1F75016C00C6FA2B /* lighting_maps_diffuse.hpp */,
 				EFB02EC61F788C86007CBE0E /* lighting_maps_specular.cpp */,
 				EFB02EC71F788C86007CBE0E /* lighting_maps_specular.hpp */,
+				EFB02ECD1F78A282007CBE0E /* light_casters_directional.cpp */,
+				EFB02ECE1F78A282007CBE0E /* light_casters_directional.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -864,6 +877,7 @@
 				EF261D061F74F4BA00C6FA2B /* materials.cpp in Sources */,
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
 				EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */,
+				EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */,
 				EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */,
 				EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */,
 				EF7AC1951F70A9D100AD327C /* base.cpp in Sources */,
