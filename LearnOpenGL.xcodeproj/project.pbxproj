@@ -26,7 +26,6 @@
 		EFB02EC81F788C86007CBE0E /* lighting_maps_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02EC61F788C86007CBE0E /* lighting_maps_specular.cpp */; };
 		EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ECD1F78A282007CBE0E /* light_casters_directional.cpp */; };
 		EFB02EDA1F78D329007CBE0E /* multiple_lights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */; };
-		EFB02EE11F78F9E5007CBE0E /* libassimp.4.0.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB02EDF1F78F776007CBE0E /* libassimp.4.0.1.dylib */; };
 		EFB02EE21F78FA06007CBE0E /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8501F6F782600849CF5 /* libGLEW.2.1.0.dylib */; };
 /* End PBXBuildFile section */
 
@@ -392,7 +391,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFB02EE21F78FA06007CBE0E /* libGLEW.2.1.0.dylib in Frameworks */,
-				EFB02EE11F78F9E5007CBE0E /* libassimp.4.0.1.dylib in Frameworks */,
 				EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */,
 				EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */,
 			);

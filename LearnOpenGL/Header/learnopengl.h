@@ -25,6 +25,8 @@
 #include "matrix_transform.hpp"
 #include "type_ptr.hpp"
 
+//通过brew安装,成功后就直接使用
+#include <assimp/Importer.hpp>
 
 
 // settings
