@@ -26,6 +26,8 @@
 		EFB02EC81F788C86007CBE0E /* lighting_maps_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02EC61F788C86007CBE0E /* lighting_maps_specular.cpp */; };
 		EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ECD1F78A282007CBE0E /* light_casters_directional.cpp */; };
 		EFB02EDA1F78D329007CBE0E /* multiple_lights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */; };
+		EFB02EE11F78F9E5007CBE0E /* libassimp.4.0.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB02EDF1F78F776007CBE0E /* libassimp.4.0.1.dylib */; };
+		EFB02EE21F78FA06007CBE0E /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8501F6F782600849CF5 /* libGLEW.2.1.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -379,6 +381,9 @@
 		EFB02ED71F78D2B2007CBE0E /* 6.multiple_lights.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.multiple_lights.frag; sourceTree = "<group>"; };
 		EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multiple_lights.cpp; sourceTree = "<group>"; };
 		EFB02ED91F78D329007CBE0E /* multiple_lights.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = multiple_lights.hpp; sourceTree = "<group>"; };
+		EFB02EDB1F78E519007CBE0E /* libassimp.4.0.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.4.0.1.dylib; path = ../../../../usr/local/lib/libassimp.4.0.1.dylib; sourceTree = "<group>"; };
+		EFB02EDD1F78E61E007CBE0E /* libassimp.4.0.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.4.0.1.dylib; path = "../assimp-4.0.1/build/code/libassimp.4.0.1.dylib"; sourceTree = "<group>"; };
+		EFB02EDF1F78F776007CBE0E /* libassimp.4.0.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.4.0.1.dylib; path = ../../../../usr/local/Cellar/assimp/4.0.1/lib/libassimp.4.0.1.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +391,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB02EE21F78FA06007CBE0E /* libGLEW.2.1.0.dylib in Frameworks */,
+				EFB02EE11F78F9E5007CBE0E /* libassimp.4.0.1.dylib in Frameworks */,
 				EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */,
 				EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */,
 			);
@@ -426,6 +433,9 @@
 		EF3BF84D1F6F77DA00849CF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFB02EDF1F78F776007CBE0E /* libassimp.4.0.1.dylib */,
+				EFB02EDD1F78E61E007CBE0E /* libassimp.4.0.1.dylib */,
+				EFB02EDB1F78E519007CBE0E /* libassimp.4.0.1.dylib */,
 				EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */,
 				EF3BF8501F6F782600849CF5 /* libGLEW.2.1.0.dylib */,
 				EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */,
@@ -1001,12 +1011,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(glew_header)",
 					"$(glfw_header)",
+					"$(assimp_header)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(glew_lib)",
 					"$(glfw_lib)",
 					/usr/local/Cellar/glew/2.1.0/lib,
 					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/assimp/4.0.1/lib,
+					"$(assimp_lib)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";
@@ -1019,12 +1032,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(glew_header)",
 					"$(glfw_header)",
+					"$(assimp_header)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(glew_lib)",
 					"$(glfw_lib)",
 					/usr/local/Cellar/glew/2.1.0/lib,
 					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/assimp/4.0.1/lib,
+					"$(assimp_lib)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";
