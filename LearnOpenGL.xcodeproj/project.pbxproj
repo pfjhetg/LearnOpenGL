@@ -25,6 +25,7 @@
 		EF7AC1991F70C44A00AD327C /* textures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1971F70C44A00AD327C /* textures.cpp */; };
 		EFB02EC81F788C86007CBE0E /* lighting_maps_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02EC61F788C86007CBE0E /* lighting_maps_specular.cpp */; };
 		EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ECD1F78A282007CBE0E /* light_casters_directional.cpp */; };
+		EFB02EDA1F78D329007CBE0E /* multiple_lights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -372,6 +373,12 @@
 		EFB02ED11F78A2A4007CBE0E /* 5.1.light_casters.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.light_casters.frag; sourceTree = "<group>"; };
 		EFB02ED21F78A2EB007CBE0E /* 5.1.lamp.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.lamp.vert; sourceTree = "<group>"; };
 		EFB02ED31F78A2F2007CBE0E /* 5.1.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.lamp.frag; sourceTree = "<group>"; };
+		EFB02ED41F78D27F007CBE0E /* 6.lamp.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.lamp.vert; sourceTree = "<group>"; };
+		EFB02ED51F78D295007CBE0E /* 6.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.lamp.frag; sourceTree = "<group>"; };
+		EFB02ED61F78D2AA007CBE0E /* 6.multiple_lights.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.multiple_lights.vert; sourceTree = "<group>"; };
+		EFB02ED71F78D2B2007CBE0E /* 6.multiple_lights.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.multiple_lights.frag; sourceTree = "<group>"; };
+		EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multiple_lights.cpp; sourceTree = "<group>"; };
+		EFB02ED91F78D329007CBE0E /* multiple_lights.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = multiple_lights.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -465,6 +472,10 @@
 				EFB02ED11F78A2A4007CBE0E /* 5.1.light_casters.frag */,
 				EFB02ED21F78A2EB007CBE0E /* 5.1.lamp.vert */,
 				EFB02ED31F78A2F2007CBE0E /* 5.1.lamp.frag */,
+				EFB02ED41F78D27F007CBE0E /* 6.lamp.vert */,
+				EFB02ED51F78D295007CBE0E /* 6.lamp.frag */,
+				EFB02ED61F78D2AA007CBE0E /* 6.multiple_lights.vert */,
+				EFB02ED71F78D2B2007CBE0E /* 6.multiple_lights.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -809,6 +820,8 @@
 				EFB02EC71F788C86007CBE0E /* lighting_maps_specular.hpp */,
 				EFB02ECD1F78A282007CBE0E /* light_casters_directional.cpp */,
 				EFB02ECE1F78A282007CBE0E /* light_casters_directional.hpp */,
+				EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */,
+				EFB02ED91F78D329007CBE0E /* multiple_lights.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -870,6 +883,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB02EDA1F78D329007CBE0E /* multiple_lights.cpp in Sources */,
 				EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */,
 				EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */,
 				EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */,
