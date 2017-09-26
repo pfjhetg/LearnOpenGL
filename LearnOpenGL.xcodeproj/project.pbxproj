@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF1768501F79E98900711B57 /* libassimp.4.0.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB02EDF1F78F776007CBE0E /* libassimp.4.0.1.dylib */; };
 		EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF261CFD1F74BCDF00C6FA2B /* basic_lighting_specular.cpp */; };
 		EF261D061F74F4BA00C6FA2B /* materials.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF261D041F74F4BA00C6FA2B /* materials.cpp */; };
 		EF261D0E1F75016C00C6FA2B /* lighting_maps_diffuse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF261D0C1F75016C00C6FA2B /* lighting_maps_diffuse.cpp */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EF17684B1F79E38000711B57 /* mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mesh.h; sourceTree = "<group>"; };
 		EF261CF91F74BC0B00C6FA2B /* 2.2.lamp.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.vert; sourceTree = "<group>"; };
 		EF261CFA1F74BC1200C6FA2B /* 2.2.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.frag; sourceTree = "<group>"; };
 		EF261CFB1F74BC2C00C6FA2B /* 2.2.basic_lighting.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.vert; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1768501F79E98900711B57 /* libassimp.4.0.1.dylib in Frameworks */,
 				EFB02EE21F78FA06007CBE0E /* libGLEW.2.1.0.dylib in Frameworks */,
 				EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */,
 				EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */,
@@ -511,6 +514,7 @@
 				EF3BF9951F6FAFEB00849CF5 /* shader.h */,
 				EF3BF99E1F6FC3FC00849CF5 /* stb_image.h */,
 				EF4055911F735E8F00B15A8A /* camera.h */,
+				EF17684B1F79E38000711B57 /* mesh.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -1006,6 +1010,7 @@
 		EF3BF84B1F6F774800849CF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(glew_header)",
 					"$(glfw_header)",
@@ -1014,10 +1019,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(glew_lib)",
 					"$(glfw_lib)",
-					/usr/local/Cellar/glew/2.1.0/lib,
-					/usr/local/Cellar/glfw/3.2.1/lib,
-					/usr/local/Cellar/assimp/4.0.1/lib,
 					"$(assimp_lib)",
+					/usr/local/Cellar/assimp/4.0.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";
@@ -1027,6 +1030,7 @@
 		EF3BF84C1F6F774800849CF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(glew_header)",
 					"$(glfw_header)",
@@ -1035,10 +1039,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(glew_lib)",
 					"$(glfw_lib)",
-					/usr/local/Cellar/glew/2.1.0/lib,
-					/usr/local/Cellar/glfw/3.2.1/lib,
-					/usr/local/Cellar/assimp/4.0.1/lib,
 					"$(assimp_lib)",
+					/usr/local/Cellar/assimp/4.0.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";

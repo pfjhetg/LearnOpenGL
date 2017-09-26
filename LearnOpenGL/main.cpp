@@ -13,7 +13,6 @@
 #include "light_casters_directional.hpp"
 #include "multiple_lights.hpp"
 
-
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 
