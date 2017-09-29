@@ -1082,7 +1082,6 @@
 					"$(glew_lib)",
 					"$(glfw_lib)",
 					"$(assimp_lib)",
-					/usr/local/Cellar/assimp/4.0.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";
@@ -1102,7 +1101,6 @@
 					"$(glew_lib)",
 					"$(glfw_lib)",
 					"$(assimp_lib)",
-					/usr/local/Cellar/assimp/4.0.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";
