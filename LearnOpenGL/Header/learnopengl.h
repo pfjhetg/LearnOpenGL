@@ -9,29 +9,16 @@
 #ifndef learnopengl_h
 #define learnopengl_h
 
-
 #include "glad.h"
 #include <GLFW/glfw3.h>
 
 #include "stb_image.h"
 #include "camera.h"
 
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <iostream>
-
-#include "glm.hpp"
-#include "matrix_transform.hpp"
-#include "type_ptr.hpp"
-
-//通过brew安装,成功后就直接使用
-#include <assimp/Importer.hpp>
-
 
 // settings
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+const unsigned int SCR_WIDTH = 1280;
+const unsigned int SCR_HEIGHT = 960;
 
 static float lastX = SCR_WIDTH / 2.0f;
 static float lastY = SCR_HEIGHT / 2.0f;

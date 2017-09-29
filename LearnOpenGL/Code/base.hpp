@@ -9,6 +9,7 @@
 #ifndef base_hpp
 #define base_hpp
 
+#include "learnopengl.h"
 #include "shader.h"
 
 class base {

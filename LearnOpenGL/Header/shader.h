@@ -9,7 +9,13 @@
 #ifndef shader_h
 #define shader_h
 
-#include "learnopengl.h"
+#include "glad.h"
+#include "glm.hpp"
+
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <iostream>
 
 class Shader
 {

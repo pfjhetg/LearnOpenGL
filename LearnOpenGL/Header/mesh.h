@@ -9,9 +9,11 @@
 #ifndef mesh_h
 #define mesh_h
 
-#include "learnopengl.h"
+#include "shader.h"
 
-using namespace std;
+#include <vector>
+//通过brew安装,成功后就直接使用
+#include <assimp/Importer.hpp>
 
 struct Vertex {
     // position
@@ -28,21 +30,21 @@ struct Vertex {
 
 struct Texture {
     unsigned int id;
-    string type;
+    std::string type;
     aiString path;
 };
 
 class Mesh {
 public:
     /*  Mesh Data  */
-    vector<Vertex> vertices;
-    vector<unsigned int> indices;
-    vector<Texture> textures;
+    std::vector<Vertex> vertices;
+    std::vector<unsigned int> indices;
+    std::vector<Texture> textures;
     unsigned int VAO;
     
     /*  Functions  */
     // constructor
-    Mesh(vector<Vertex> vertices, vector<unsigned int> indices, vector<Texture> textures)
+    Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures)
     {
         this->vertices = vertices;
         this->indices = indices;
@@ -64,9 +66,9 @@ public:
         {
             glActiveTexture(GL_TEXTURE0 + i); // active proper texture unit before binding
             // retrieve texture number (the N in diffuse_textureN)
-            stringstream ss;
-            string number;
-            string name = textures[i].type;
+            std::stringstream ss;
+            std::string number;
+            std::string name = textures[i].type;
             if(name == "texture_diffuse")
                 ss << diffuseNr++; // transfer unsigned int to stream
             else if(name == "texture_specular")

@@ -17,6 +17,7 @@
 		EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF9981F6FB65500849CF5 /* glad.c */; };
 		EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF40558C1F7351C100B15A8A /* camera_circle.cpp */; };
 		EF40559B1F738DAF00B15A8A /* colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4055991F738DAF00B15A8A /* colors.cpp */; };
+		EF594DD31F7DDFA8008EE0D6 /* model_loading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF594DD11F7DDFA8008EE0D6 /* model_loading.cpp */; };
 		EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5091F723974006F8A9F /* transformations.cpp */; };
 		EF79B5131F724F50006F8A9F /* coordinate_systems.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5111F724F50006F8A9F /* coordinate_systems.cpp */; };
 		EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5141F725824006F8A9F /* coordinate_systems_depth.cpp */; };
@@ -44,6 +45,27 @@
 
 /* Begin PBXFileReference section */
 		EF17684B1F79E38000711B57 /* mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mesh.h; sourceTree = "<group>"; };
+		EF1768521F79FF1400711B57 /* arm_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_dif.png; sourceTree = "<group>"; };
+		EF1768531F79FF1400711B57 /* arm_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_showroom_ddn.png; sourceTree = "<group>"; };
+		EF1768541F79FF1400711B57 /* arm_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_showroom_spec.png; sourceTree = "<group>"; };
+		EF1768551F79FF1400711B57 /* body_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_dif.png; sourceTree = "<group>"; };
+		EF1768561F79FF1400711B57 /* body_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_showroom_ddn.png; sourceTree = "<group>"; };
+		EF1768571F79FF1400711B57 /* body_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_showroom_spec.png; sourceTree = "<group>"; };
+		EF1768581F79FF1400711B57 /* glass_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glass_ddn.png; sourceTree = "<group>"; };
+		EF1768591F79FF1400711B57 /* glass_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glass_dif.png; sourceTree = "<group>"; };
+		EF17685A1F79FF1400711B57 /* hand_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_dif.png; sourceTree = "<group>"; };
+		EF17685B1F79FF1400711B57 /* hand_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_showroom_ddn.png; sourceTree = "<group>"; };
+		EF17685C1F79FF1400711B57 /* hand_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_showroom_spec.png; sourceTree = "<group>"; };
+		EF17685D1F79FF1400711B57 /* helmet_diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_diff.png; sourceTree = "<group>"; };
+		EF17685E1F79FF1400711B57 /* helmet_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_showroom_ddn.png; sourceTree = "<group>"; };
+		EF17685F1F79FF1400711B57 /* helmet_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_showroom_spec.png; sourceTree = "<group>"; };
+		EF1768601F79FF1400711B57 /* leg_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_dif.png; sourceTree = "<group>"; };
+		EF1768611F79FF1400711B57 /* leg_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_showroom_ddn.png; sourceTree = "<group>"; };
+		EF1768621F79FF1400711B57 /* leg_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_showroom_spec.png; sourceTree = "<group>"; };
+		EF1768631F79FF1400711B57 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		EF1768641F79FF1400711B57 /* nanosuit.blend */ = {isa = PBXFileReference; lastKnownFileType = file; path = nanosuit.blend; sourceTree = "<group>"; };
+		EF1768651F79FF1400711B57 /* nanosuit.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = nanosuit.mtl; sourceTree = "<group>"; };
+		EF1768661F79FF1400711B57 /* nanosuit.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = nanosuit.obj; sourceTree = "<group>"; };
 		EF261CF91F74BC0B00C6FA2B /* 2.2.lamp.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.vert; sourceTree = "<group>"; };
 		EF261CFA1F74BC1200C6FA2B /* 2.2.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.frag; sourceTree = "<group>"; };
 		EF261CFB1F74BC2C00C6FA2B /* 2.2.basic_lighting.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.vert; sourceTree = "<group>"; };
@@ -87,6 +109,11 @@
 		EF4055981F73875F00B15A8A /* 1.lamp.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 1.lamp.frag; sourceTree = "<group>"; };
 		EF4055991F738DAF00B15A8A /* colors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colors.cpp; sourceTree = "<group>"; };
 		EF40559A1F738DAF00B15A8A /* colors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = colors.hpp; sourceTree = "<group>"; };
+		EF594DD01F7DDF2F008EE0D6 /* model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = model.h; sourceTree = "<group>"; };
+		EF594DD11F7DDFA8008EE0D6 /* model_loading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model_loading.cpp; sourceTree = "<group>"; };
+		EF594DD21F7DDFA8008EE0D6 /* model_loading.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = model_loading.hpp; sourceTree = "<group>"; };
+		EF594DD41F7DDFCA008EE0D6 /* model_loading.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = model_loading.vert; sourceTree = "<group>"; };
+		EF594DD51F7DDFD4008EE0D6 /* model_loading.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = model_loading.frag; sourceTree = "<group>"; };
 		EF79B4081F72190A006F8A9F /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		EF79B4091F72190A006F8A9F /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
 		EF79B40B1F72190A006F8A9F /* _features.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = _features.hpp; sourceTree = "<group>"; };
@@ -402,6 +429,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF1768511F79FF1400711B57 /* nanosuit */ = {
+			isa = PBXGroup;
+			children = (
+				EF1768521F79FF1400711B57 /* arm_dif.png */,
+				EF1768531F79FF1400711B57 /* arm_showroom_ddn.png */,
+				EF1768541F79FF1400711B57 /* arm_showroom_spec.png */,
+				EF1768551F79FF1400711B57 /* body_dif.png */,
+				EF1768561F79FF1400711B57 /* body_showroom_ddn.png */,
+				EF1768571F79FF1400711B57 /* body_showroom_spec.png */,
+				EF1768581F79FF1400711B57 /* glass_ddn.png */,
+				EF1768591F79FF1400711B57 /* glass_dif.png */,
+				EF17685A1F79FF1400711B57 /* hand_dif.png */,
+				EF17685B1F79FF1400711B57 /* hand_showroom_ddn.png */,
+				EF17685C1F79FF1400711B57 /* hand_showroom_spec.png */,
+				EF17685D1F79FF1400711B57 /* helmet_diff.png */,
+				EF17685E1F79FF1400711B57 /* helmet_showroom_ddn.png */,
+				EF17685F1F79FF1400711B57 /* helmet_showroom_spec.png */,
+				EF1768601F79FF1400711B57 /* leg_dif.png */,
+				EF1768611F79FF1400711B57 /* leg_showroom_ddn.png */,
+				EF1768621F79FF1400711B57 /* leg_showroom_spec.png */,
+				EF1768631F79FF1400711B57 /* LICENSE.txt */,
+				EF1768641F79FF1400711B57 /* nanosuit.blend */,
+				EF1768651F79FF1400711B57 /* nanosuit.mtl */,
+				EF1768661F79FF1400711B57 /* nanosuit.obj */,
+			);
+			path = nanosuit;
+			sourceTree = "<group>";
+		};
 		EF3BF83A1F6F774800849CF5 = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +542,8 @@
 				EFB02ED51F78D295007CBE0E /* 6.lamp.frag */,
 				EFB02ED61F78D2AA007CBE0E /* 6.multiple_lights.vert */,
 				EFB02ED71F78D2B2007CBE0E /* 6.multiple_lights.frag */,
+				EF594DD41F7DDFCA008EE0D6 /* model_loading.vert */,
+				EF594DD51F7DDFD4008EE0D6 /* model_loading.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -494,6 +551,7 @@
 		EF3BF8551F6F97BB00849CF5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EF1768511F79FF1400711B57 /* nanosuit */,
 				EFB02EC51F788BFF007CBE0E /* container2_specular.png */,
 				EF261D071F74FF1400C6FA2B /* container2.png */,
 				EF79B5191F7260C9006F8A9F /* container.jpg */,
@@ -511,10 +569,11 @@
 				EF3BF9991F6FB65500849CF5 /* glad.h */,
 				EF3BF99A1F6FB65500849CF5 /* khrplatform.h */,
 				EF3BF9941F6FAFEB00849CF5 /* learnopengl.h */,
-				EF3BF9951F6FAFEB00849CF5 /* shader.h */,
 				EF3BF99E1F6FC3FC00849CF5 /* stb_image.h */,
 				EF4055911F735E8F00B15A8A /* camera.h */,
+				EF3BF9951F6FAFEB00849CF5 /* shader.h */,
 				EF17684B1F79E38000711B57 /* mesh.h */,
+				EF594DD01F7DDF2F008EE0D6 /* model.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -834,6 +893,8 @@
 				EFB02ECE1F78A282007CBE0E /* light_casters_directional.hpp */,
 				EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */,
 				EFB02ED91F78D329007CBE0E /* multiple_lights.hpp */,
+				EF594DD11F7DDFA8008EE0D6 /* model_loading.cpp */,
+				EF594DD21F7DDFA8008EE0D6 /* model_loading.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -905,6 +966,7 @@
 				EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */,
 				EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */,
 				EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */,
+				EF594DD31F7DDFA8008EE0D6 /* model_loading.cpp in Sources */,
 				EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */,
 				EF7AC1951F70A9D100AD327C /* base.cpp in Sources */,
 				EFB02EC81F788C86007CBE0E /* lighting_maps_specular.cpp in Sources */,
