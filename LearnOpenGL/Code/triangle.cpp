@@ -44,6 +44,7 @@ void triangle::loadShader() {
     // 缓冲数据:把定点数据复制到缓冲的内存中
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
+    // position attribute
     // glVertexAttribPointer函数告诉OpenGL该如何解析顶点数据（应用到逐个顶点属性上）
     // 第一个参数指定我们要配置的顶点属性,我们在顶点着色器中使用layout(location = 0)定义了position顶点属性的位置值(Location),它可以把顶点属性的位置值设置为0。因为我们希望把数据传递到这一个顶点属性中，所以这里我们传入0。
     // 第二个参数指定顶点属性的大小。顶点属性是一个vec3，它由3个值组成，所以大小是3.
