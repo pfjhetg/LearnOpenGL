@@ -25,6 +25,7 @@
 		EF7AC1921F70A73E00AD327C /* triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1901F70A73E00AD327C /* triangle.cpp */; };
 		EF7AC1951F70A9D100AD327C /* base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1931F70A9D100AD327C /* base.cpp */; };
 		EF7AC1991F70C44A00AD327C /* textures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7AC1971F70C44A00AD327C /* textures.cpp */; };
+		EF7BAF281F8B2024007B731E /* stencil_testing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7BAF261F8B2024007B731E /* stencil_testing.cpp */; };
 		EFB02EC81F788C86007CBE0E /* lighting_maps_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02EC61F788C86007CBE0E /* lighting_maps_specular.cpp */; };
 		EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ECD1F78A282007CBE0E /* light_casters_directional.cpp */; };
 		EFB02EDA1F78D329007CBE0E /* multiple_lights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */; };
@@ -390,6 +391,11 @@
 		EF7AC1981F70C44A00AD327C /* textures.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = textures.hpp; sourceTree = "<group>"; };
 		EF7AC19A1F70C48E00AD327C /* 4.1.texture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.vert; sourceTree = "<group>"; };
 		EF7AC19B1F70C49D00AD327C /* 4.1.texture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.texture.frag; sourceTree = "<group>"; };
+		EF7BAF231F8B1C1D007B731E /* 2.stencil_testing.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.stencil_testing.vert; sourceTree = "<group>"; };
+		EF7BAF241F8B1C2E007B731E /* 2.stencil_testing.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.stencil_testing.frag; sourceTree = "<group>"; };
+		EF7BAF251F8B1C52007B731E /* 2.stencil_single_color.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.stencil_single_color.frag; sourceTree = "<group>"; };
+		EF7BAF261F8B2024007B731E /* stencil_testing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stencil_testing.cpp; sourceTree = "<group>"; };
+		EF7BAF271F8B2024007B731E /* stencil_testing.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stencil_testing.hpp; sourceTree = "<group>"; };
 		EFB02EC51F788BFF007CBE0E /* container2_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2_specular.png; sourceTree = "<group>"; };
 		EFB02EC61F788C86007CBE0E /* lighting_maps_specular.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lighting_maps_specular.cpp; sourceTree = "<group>"; };
 		EFB02EC71F788C86007CBE0E /* lighting_maps_specular.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lighting_maps_specular.hpp; sourceTree = "<group>"; };
@@ -540,6 +546,9 @@
 				EFB02ED71F78D2B2007CBE0E /* 6.multiple_lights.frag */,
 				EF594DD41F7DDFCA008EE0D6 /* model_loading.vert */,
 				EF594DD51F7DDFD4008EE0D6 /* model_loading.frag */,
+				EF7BAF231F8B1C1D007B731E /* 2.stencil_testing.vert */,
+				EF7BAF241F8B1C2E007B731E /* 2.stencil_testing.frag */,
+				EF7BAF251F8B1C52007B731E /* 2.stencil_single_color.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -891,6 +900,8 @@
 				EFB02ED91F78D329007CBE0E /* multiple_lights.hpp */,
 				EF594DD11F7DDFA8008EE0D6 /* model_loading.cpp */,
 				EF594DD21F7DDFA8008EE0D6 /* model_loading.hpp */,
+				EF7BAF261F8B2024007B731E /* stencil_testing.cpp */,
+				EF7BAF271F8B2024007B731E /* stencil_testing.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -963,6 +974,7 @@
 				EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */,
 				EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */,
 				EF594DD31F7DDFA8008EE0D6 /* model_loading.cpp in Sources */,
+				EF7BAF281F8B2024007B731E /* stencil_testing.cpp in Sources */,
 				EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */,
 				EF7AC1951F70A9D100AD327C /* base.cpp in Sources */,
 				EFB02EC81F788C86007CBE0E /* lighting_maps_specular.cpp in Sources */,

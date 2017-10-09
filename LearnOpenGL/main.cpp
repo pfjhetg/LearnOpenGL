@@ -12,6 +12,7 @@
 #include "light_casters_directional.hpp"
 #include "multiple_lights.hpp"
 #include "model_loading.hpp"
+#include "stencil_testing.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
@@ -61,7 +62,8 @@ int main() {
 //    base = new lighting_maps_specular(window);//基础光照-高光反射,有bug,去掉鼠标,键盘的处理,用漫游替换
 //    base = new light_casters_directional(window);//平行光,有bug,去掉鼠标,键盘的处理,用漫游替换
 //    base = new multiple_lights(window);//多光源,有bug,去掉鼠标,键盘的处理,用漫游替换
-    base = new model_loading(window);//加载模型
+//    base = new model_loading(window);//加载模型
+    base = new stencil_testing(window);//模版测试(物体轮廓)
     
     // build and compile our shader program
     base->loadShader();
