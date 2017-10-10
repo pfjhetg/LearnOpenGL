@@ -114,8 +114,8 @@ void stencil_testing::loadShader() {
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
     glBindVertexArray(0);
     
-    cubeTexture = loadTexture("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/wall.jpg");
-    floorTexture = loadTexture("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/container.jpg");
+    cubeTexture = loadTexture("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/marble.jpg");
+    floorTexture = loadTexture("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/metal.jpg");
     
     this->shader->use();
     this->shader->setInt("texture1", 0);
@@ -132,6 +132,7 @@ void stencil_testing::renderLoop() {
     glm::mat4 model;
     glm::mat4 view;
     glm::mat4 projection;
+//    model = this->camera->GetViewMatrix();
     view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -200.0f));
     projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 1000.0f);
     this->shaderSingleColor->setMat4("view", view);
