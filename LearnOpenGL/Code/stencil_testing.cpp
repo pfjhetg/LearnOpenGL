@@ -115,7 +115,7 @@ void stencil_testing::loadShader() {
     glBindVertexArray(0);
     
     cubeTexture = loadTexture("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/marble.jpg");
-    floorTexture = loadTexture("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/metal.jpg");
+    floorTexture = loadTexture("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/metal.png");
     
     this->shader->use();
     this->shader->setInt("texture1", 0);

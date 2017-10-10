@@ -11,7 +11,6 @@
 colors::colors(GLFWwindow *window) {
     this->lightingShader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/1.colors.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/1.colors.frag");
     this->lampShader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/1.lamp.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/1.lamp.frag");
-    this->camera = new Camera(glm::vec3(0.5f, 0.5f, 100.0f));
     this->window = window;
 }
 

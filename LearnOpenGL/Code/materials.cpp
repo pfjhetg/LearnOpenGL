@@ -10,7 +10,6 @@
 
 materials::materials(GLFWwindow *window) {
     this->window = window;
-    this->camera = new Camera(glm::vec3(0.5f, 0.5f, 100.0f));
 }
 
 void materials::loadShader() {

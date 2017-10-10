@@ -18,7 +18,7 @@
 
 // settings
 const unsigned int SCR_WIDTH = 1280;
-const unsigned int SCR_HEIGHT = 960;
+const unsigned int SCR_HEIGHT = 720;
 
 static float lastX = SCR_WIDTH / 2.0f;
 static float lastY = SCR_HEIGHT / 2.0f;

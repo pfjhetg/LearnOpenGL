@@ -18,6 +18,7 @@
 		EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF40558C1F7351C100B15A8A /* camera_circle.cpp */; };
 		EF40559B1F738DAF00B15A8A /* colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4055991F738DAF00B15A8A /* colors.cpp */; };
 		EF594DD31F7DDFA8008EE0D6 /* model_loading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF594DD11F7DDFA8008EE0D6 /* model_loading.cpp */; };
+		EF614B761F8CB72E008BED82 /* framebuffers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF614B741F8CB72E008BED82 /* framebuffers.cpp */; };
 		EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5091F723974006F8A9F /* transformations.cpp */; };
 		EF79B5131F724F50006F8A9F /* coordinate_systems.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5111F724F50006F8A9F /* coordinate_systems.cpp */; };
 		EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5141F725824006F8A9F /* coordinate_systems_depth.cpp */; };
@@ -129,6 +130,12 @@
 		EF614B711F8CAFE1008BED82 /* nanosuit.blend */ = {isa = PBXFileReference; lastKnownFileType = file; path = nanosuit.blend; sourceTree = "<group>"; };
 		EF614B721F8CAFE1008BED82 /* nanosuit.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nanosuit.mtl; sourceTree = "<group>"; };
 		EF614B731F8CAFE1008BED82 /* nanosuit.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nanosuit.obj; sourceTree = "<group>"; };
+		EF614B741F8CB72E008BED82 /* framebuffers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framebuffers.cpp; sourceTree = "<group>"; };
+		EF614B751F8CB72E008BED82 /* framebuffers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = framebuffers.hpp; sourceTree = "<group>"; };
+		EF614B771F8CB836008BED82 /* 5.1.framebuffers.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.framebuffers.vert; sourceTree = "<group>"; };
+		EF614B781F8CB842008BED82 /* 5.1.framebuffers.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.framebuffers.frag; sourceTree = "<group>"; };
+		EF614B791F8CB868008BED82 /* 5.1.framebuffers_screen.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.framebuffers_screen.vert; sourceTree = "<group>"; };
+		EF614B7A1F8CB871008BED82 /* 5.1.framebuffers_screen.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.framebuffers_screen.frag; sourceTree = "<group>"; };
 		EF79B4081F72190A006F8A9F /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		EF79B4091F72190A006F8A9F /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
 		EF79B40B1F72190A006F8A9F /* _features.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = _features.hpp; sourceTree = "<group>"; };
@@ -563,6 +570,10 @@
 				EF7BAF231F8B1C1D007B731E /* 2.stencil_testing.vert */,
 				EF7BAF241F8B1C2E007B731E /* 2.stencil_testing.frag */,
 				EF7BAF251F8B1C52007B731E /* 2.stencil_single_color.frag */,
+				EF614B771F8CB836008BED82 /* 5.1.framebuffers.vert */,
+				EF614B781F8CB842008BED82 /* 5.1.framebuffers.frag */,
+				EF614B791F8CB868008BED82 /* 5.1.framebuffers_screen.vert */,
+				EF614B7A1F8CB871008BED82 /* 5.1.framebuffers_screen.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -930,6 +941,8 @@
 				EF594DD21F7DDFA8008EE0D6 /* model_loading.hpp */,
 				EF7BAF261F8B2024007B731E /* stencil_testing.cpp */,
 				EF7BAF271F8B2024007B731E /* stencil_testing.hpp */,
+				EF614B741F8CB72E008BED82 /* framebuffers.cpp */,
+				EF614B751F8CB72E008BED82 /* framebuffers.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -1008,6 +1021,7 @@
 				EFB02EC81F788C86007CBE0E /* lighting_maps_specular.cpp in Sources */,
 				EF7AC1921F70A73E00AD327C /* triangle.cpp in Sources */,
 				EF79B5131F724F50006F8A9F /* coordinate_systems.cpp in Sources */,
+				EF614B761F8CB72E008BED82 /* framebuffers.cpp in Sources */,
 				EF7AC1991F70C44A00AD327C /* textures.cpp in Sources */,
 				EF40559B1F738DAF00B15A8A /* colors.cpp in Sources */,
 			);

@@ -10,7 +10,6 @@
 
 basic_lighting_specular::basic_lighting_specular(GLFWwindow *window) {
     this->window = window;
-    this->camera = new Camera(glm::vec3(0.5f, 0.5f, 100.0f));
 }
 
 void basic_lighting_specular::loadShader() {

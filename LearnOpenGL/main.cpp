@@ -13,6 +13,8 @@
 #include "multiple_lights.hpp"
 #include "model_loading.hpp"
 #include "stencil_testing.hpp"
+#include "framebuffers.hpp"
+
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
@@ -63,7 +65,8 @@ int main() {
 //    base = new light_casters_directional(window);//平行光,有bug,去掉鼠标,键盘的处理,用漫游替换
 //    base = new multiple_lights(window);//多光源,有bug,去掉鼠标,键盘的处理,用漫游替换
 //    base = new model_loading(window);//加载模型
-    base = new stencil_testing(window);//模版测试(物体轮廓)
+//    base = new stencil_testing(window);//模版测试(物体轮廓)
+    base = new framebuffers(window);//帧缓冲
     
     // build and compile our shader program
     base->loadShader();
