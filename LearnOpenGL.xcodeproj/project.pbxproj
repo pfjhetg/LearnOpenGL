@@ -437,6 +437,12 @@
 		EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multiple_lights.cpp; sourceTree = "<group>"; };
 		EFB02ED91F78D329007CBE0E /* multiple_lights.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = multiple_lights.hpp; sourceTree = "<group>"; };
 		EFB02EDF1F78F776007CBE0E /* libassimp.4.0.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.4.0.1.dylib; path = ../../../../usr/local/Cellar/assimp/4.0.1/lib/libassimp.4.0.1.dylib; sourceTree = "<group>"; };
+		EFCDE4701F8E053900D08958 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
+		EFCDE4711F8E053900D08958 /* bottom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bottom.jpg; sourceTree = "<group>"; };
+		EFCDE4721F8E053900D08958 /* front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpg; sourceTree = "<group>"; };
+		EFCDE4731F8E053900D08958 /* left.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = left.jpg; sourceTree = "<group>"; };
+		EFCDE4741F8E053900D08958 /* right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = right.jpg; sourceTree = "<group>"; };
+		EFCDE4751F8E053900D08958 /* top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -581,6 +587,7 @@
 		EF3BF8551F6F97BB00849CF5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EFCDE46F1F8E053900D08958 /* skybox */,
 				EF1768511F79FF1400711B57 /* nanosuit */,
 				EF614B3C1F8CAFA7008BED82 /* bricks2_disp.jpg */,
 				EF614B3D1F8CAFA7008BED82 /* bricks2_normal.jpg */,
@@ -945,6 +952,19 @@
 				EF614B751F8CB72E008BED82 /* framebuffers.hpp */,
 			);
 			path = Code;
+			sourceTree = "<group>";
+		};
+		EFCDE46F1F8E053900D08958 /* skybox */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDE4701F8E053900D08958 /* back.jpg */,
+				EFCDE4711F8E053900D08958 /* bottom.jpg */,
+				EFCDE4721F8E053900D08958 /* front.jpg */,
+				EFCDE4731F8E053900D08958 /* left.jpg */,
+				EFCDE4741F8E053900D08958 /* right.jpg */,
+				EFCDE4751F8E053900D08958 /* top.jpg */,
+			);
+			path = skybox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

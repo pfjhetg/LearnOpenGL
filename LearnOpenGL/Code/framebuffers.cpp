@@ -15,7 +15,7 @@ framebuffers::framebuffers(GLFWwindow *window) {
 
 void framebuffers::loadShader() {
     this->shader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/5.1.framebuffers.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/5.1.framebuffers.frag");
-    this->shader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/5.1.framebuffers_screen.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/5.1.framebuffers_screen.frag");
+    this->screenShader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/5.1.framebuffers_screen.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/5.1.framebuffers_screen.frag");
     
     float cubeVertices[] = {
         // positions          // texture Coords
@@ -126,17 +126,19 @@ void framebuffers::loadShader() {
     // -------------------------
     glGenFramebuffers(1, &framebuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
-    // create a color attachment texture
+    // create a color attachment texture 附加纹理图像
     glGenTextures(1, &textureColorbuffer);
     glBindTexture(GL_TEXTURE_2D, textureColorbuffer);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, SCR_WIDTH, SCR_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // 将它附加到当前绑定的帧缓冲对象
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureColorbuffer, 0);
-    // create a renderbuffer object for depth and stencil attachment (we won't be sampling these)
+    // create a renderbuffer object for depth and stencil attachment (we won't be sampling these) 附加深度（和模板）附件
     glGenRenderbuffers(1, &RBO);
     glBindRenderbuffer(GL_RENDERBUFFER, RBO);
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, SCR_WIDTH, SCR_HEIGHT); // use a single renderbuffer object for both a depth AND stencil buffer.
+    // 将它附加到当前绑定的帧缓冲对象
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, RBO); // now actually attach it
     // now that we actually created the framebuffer and added all attachments we want to check if it is actually complete now
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
@@ -151,14 +153,17 @@ void framebuffers::renderLoop() {
     glEnable(GL_DEPTH_TEST); // enable depth testing (is disabled for rendering screen-space quad)
     glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    // 开始线框模式
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    
     this->shader->use();
     
     glm::mat4 model;
     glm::mat4 view;
     glm::mat4 projection;
     
-//    view = camera->GetViewMatrix();
-//    model = glm::rotate(model, 0.0f, glm::vec3(0.5f, 1.0f, 0.0f));
+    model = glm::rotate(model, 30.0f, glm::vec3(0.5f, 1.0f, 0.0f));
     view  = glm::translate(view, glm::vec3(0.0f, -1.0f, -600.0f));
     projection = glm::perspective(glm::radians(camera->Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 10000.0f);
     shader->setMat4("view", view);
@@ -195,7 +200,8 @@ void framebuffers::renderLoop() {
     glBindTexture(GL_TEXTURE_2D, textureColorbuffer);	// use the color attachment texture as the texture of the quad plane
     glDrawArrays(GL_TRIANGLES, 0, 6);
 
-    
+    // 结束线框模式
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
     // -------------------------------------------------------------------------------
     glfwSwapBuffers(this->window);
