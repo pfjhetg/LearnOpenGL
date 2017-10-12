@@ -10,7 +10,6 @@
 #define model_loading_hpp
 
 #include "base.hpp"
-#include "model.h"
 
 class model_loading: public base {
 public:

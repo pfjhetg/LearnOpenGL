@@ -10,7 +10,6 @@
 #define stencil_testing_hpp
 
 #include "base.hpp"
-#include "model.h"
 
 class stencil_testing: public base {
 public:

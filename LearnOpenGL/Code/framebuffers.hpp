@@ -10,7 +10,6 @@
 #define framebuffers_hpp
 
 #include "base.hpp"
-#include "model.h"
 
 class framebuffers: public base {
 public:
@@ -26,6 +25,7 @@ public:
     void loadShader();
     void renderLoop();
     void deallocate();
+    
 };
 
 #endif /* framebuffers_hpp */

@@ -11,6 +11,7 @@
 
 #include "learnopengl.h"
 #include "shader.h"
+#include "model.h"
 
 class base {
 public:
@@ -26,6 +27,8 @@ public:
     virtual void renderLoop();
     virtual void deallocate();
     virtual unsigned int loadTexture(char *path);
+    virtual unsigned int loadCubemap(vector<std::string> faces);
+
     
 };
 

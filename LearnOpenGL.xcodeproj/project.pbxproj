@@ -31,6 +31,7 @@
 		EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ECD1F78A282007CBE0E /* light_casters_directional.cpp */; };
 		EFB02EDA1F78D329007CBE0E /* multiple_lights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */; };
 		EFB02EE21F78FA06007CBE0E /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8501F6F782600849CF5 /* libGLEW.2.1.0.dylib */; };
+		EFDEB1B31F8F08DD00876087 /* cubemaps_skybox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFDEB1B11F8F08DD00876087 /* cubemaps_skybox.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -443,6 +444,12 @@
 		EFCDE4731F8E053900D08958 /* left.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = left.jpg; sourceTree = "<group>"; };
 		EFCDE4741F8E053900D08958 /* right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = right.jpg; sourceTree = "<group>"; };
 		EFCDE4751F8E053900D08958 /* top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top.jpg; sourceTree = "<group>"; };
+		EFDEB1AD1F8F06CE00876087 /* 6.1.cubemaps.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.1.cubemaps.vert; sourceTree = "<group>"; };
+		EFDEB1AE1F8F06D800876087 /* 6.1.cubemaps.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.1.cubemaps.frag; sourceTree = "<group>"; };
+		EFDEB1AF1F8F088900876087 /* 6.1.skybox.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.1.skybox.vert; sourceTree = "<group>"; };
+		EFDEB1B01F8F089200876087 /* 6.1.skybox.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.1.skybox.frag; sourceTree = "<group>"; };
+		EFDEB1B11F8F08DD00876087 /* cubemaps_skybox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cubemaps_skybox.cpp; sourceTree = "<group>"; };
+		EFDEB1B21F8F08DD00876087 /* cubemaps_skybox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cubemaps_skybox.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -580,6 +587,10 @@
 				EF614B781F8CB842008BED82 /* 5.1.framebuffers.frag */,
 				EF614B791F8CB868008BED82 /* 5.1.framebuffers_screen.vert */,
 				EF614B7A1F8CB871008BED82 /* 5.1.framebuffers_screen.frag */,
+				EFDEB1AD1F8F06CE00876087 /* 6.1.cubemaps.vert */,
+				EFDEB1AE1F8F06D800876087 /* 6.1.cubemaps.frag */,
+				EFDEB1AF1F8F088900876087 /* 6.1.skybox.vert */,
+				EFDEB1B01F8F089200876087 /* 6.1.skybox.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -950,6 +961,8 @@
 				EF7BAF271F8B2024007B731E /* stencil_testing.hpp */,
 				EF614B741F8CB72E008BED82 /* framebuffers.cpp */,
 				EF614B751F8CB72E008BED82 /* framebuffers.hpp */,
+				EFDEB1B11F8F08DD00876087 /* cubemaps_skybox.cpp */,
+				EFDEB1B21F8F08DD00876087 /* cubemaps_skybox.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -1027,6 +1040,7 @@
 				EFB02EDA1F78D329007CBE0E /* multiple_lights.cpp in Sources */,
 				EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */,
 				EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */,
+				EFDEB1B31F8F08DD00876087 /* cubemaps_skybox.cpp in Sources */,
 				EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */,
 				EF261D0E1F75016C00C6FA2B /* lighting_maps_diffuse.cpp in Sources */,
 				EF261D061F74F4BA00C6FA2B /* materials.cpp in Sources */,
