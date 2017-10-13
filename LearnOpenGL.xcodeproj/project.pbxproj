@@ -17,6 +17,7 @@
 		EF3BF99B1F6FB65500849CF5 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF9981F6FB65500849CF5 /* glad.c */; };
 		EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF40558C1F7351C100B15A8A /* camera_circle.cpp */; };
 		EF40559B1F738DAF00B15A8A /* colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4055991F738DAF00B15A8A /* colors.cpp */; };
+		EF412C8E1F909FC5005E128E /* advanced_glsl_ubo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF412C8C1F909FC5005E128E /* advanced_glsl_ubo.cpp */; };
 		EF594DD31F7DDFA8008EE0D6 /* model_loading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF594DD11F7DDFA8008EE0D6 /* model_loading.cpp */; };
 		EF614B761F8CB72E008BED82 /* framebuffers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF614B741F8CB72E008BED82 /* framebuffers.cpp */; };
 		EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF79B5091F723974006F8A9F /* transformations.cpp */; };
@@ -91,6 +92,13 @@
 		EF4055981F73875F00B15A8A /* 1.lamp.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 1.lamp.frag; sourceTree = "<group>"; };
 		EF4055991F738DAF00B15A8A /* colors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colors.cpp; sourceTree = "<group>"; };
 		EF40559A1F738DAF00B15A8A /* colors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = colors.hpp; sourceTree = "<group>"; };
+		EF412C8C1F909FC5005E128E /* advanced_glsl_ubo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = advanced_glsl_ubo.cpp; sourceTree = "<group>"; };
+		EF412C8D1F909FC5005E128E /* advanced_glsl_ubo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = advanced_glsl_ubo.hpp; sourceTree = "<group>"; };
+		EF412C8F1F909FEA005E128E /* 8.advanced_glsl.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 8.advanced_glsl.vert; sourceTree = "<group>"; };
+		EF412C901F909FFC005E128E /* 8.red.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 8.red.frag; sourceTree = "<group>"; };
+		EF412C911F90A00D005E128E /* 8.green.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 8.green.frag; sourceTree = "<group>"; };
+		EF412C921F90A016005E128E /* 8.blue.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 8.blue.frag; sourceTree = "<group>"; };
+		EF412C931F90A020005E128E /* 8.yellow.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 8.yellow.frag; sourceTree = "<group>"; };
 		EF594DD01F7DDF2F008EE0D6 /* model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = model.h; sourceTree = "<group>"; };
 		EF594DD11F7DDFA8008EE0D6 /* model_loading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model_loading.cpp; sourceTree = "<group>"; };
 		EF594DD21F7DDFA8008EE0D6 /* model_loading.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = model_loading.hpp; sourceTree = "<group>"; };
@@ -591,6 +599,11 @@
 				EFDEB1AE1F8F06D800876087 /* 6.1.cubemaps.frag */,
 				EFDEB1AF1F8F088900876087 /* 6.1.skybox.vert */,
 				EFDEB1B01F8F089200876087 /* 6.1.skybox.frag */,
+				EF412C8F1F909FEA005E128E /* 8.advanced_glsl.vert */,
+				EF412C901F909FFC005E128E /* 8.red.frag */,
+				EF412C911F90A00D005E128E /* 8.green.frag */,
+				EF412C921F90A016005E128E /* 8.blue.frag */,
+				EF412C931F90A020005E128E /* 8.yellow.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -963,6 +976,8 @@
 				EF614B751F8CB72E008BED82 /* framebuffers.hpp */,
 				EFDEB1B11F8F08DD00876087 /* cubemaps_skybox.cpp */,
 				EFDEB1B21F8F08DD00876087 /* cubemaps_skybox.hpp */,
+				EF412C8C1F909FC5005E128E /* advanced_glsl_ubo.cpp */,
+				EF412C8D1F909FC5005E128E /* advanced_glsl_ubo.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -1039,6 +1054,7 @@
 			files = (
 				EFB02EDA1F78D329007CBE0E /* multiple_lights.cpp in Sources */,
 				EF40558E1F7351C100B15A8A /* camera_circle.cpp in Sources */,
+				EF412C8E1F909FC5005E128E /* advanced_glsl_ubo.cpp in Sources */,
 				EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */,
 				EFDEB1B31F8F08DD00876087 /* cubemaps_skybox.cpp in Sources */,
 				EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */,

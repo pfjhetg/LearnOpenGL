@@ -15,6 +15,7 @@
 #include "stencil_testing.hpp"
 #include "framebuffers.hpp"
 #include "cubemaps_skybox.hpp"
+#include "advanced_glsl_ubo.hpp"
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -68,7 +69,8 @@ int main() {
 //    base = new model_loading(window);//加载模型
 //    base = new stencil_testing(window);//模版测试(物体轮廓)
 //    base = new framebuffers(window);//帧缓冲
-    base = new cubemaps_skybox(window);//天空盒子
+//    base = new cubemaps_skybox(window);//天空盒子
+    base = new advanced_glsl_ubo(window);//使用Uniform缓冲
     
     // build and compile our shader program
     base->loadShader();

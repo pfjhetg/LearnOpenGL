@@ -23,6 +23,7 @@
 class Shader
 {
 public:
+    // 程序ID
     unsigned int ID;
     // constructor generates the shader on the fly
     // ------------------------------------------------------------------------
@@ -75,6 +76,7 @@ public:
         //int success;
         //char infoLog[512];
         // vertex shader
+        // glCreateShader着色器
         vertex = glCreateShader(GL_VERTEX_SHADER);
         glShaderSource(vertex, 1, &vShaderCode, NULL);
         glCompileShader(vertex);
@@ -95,7 +97,9 @@ public:
             checkCompileErrors(geometry, "GEOMETRY");
         }
         // shader Program
+        // glCreateProgram函数创建一个程序，并返回新创建程序对象的ID引用
         ID = glCreateProgram();
+        // 把之前编译的着色器附加到程序对象上
         glAttachShader(ID, vertex);
         glAttachShader(ID, fragment);
         if (geometryPath != nullptr)
@@ -113,17 +117,24 @@ public:
     // ------------------------------------------------------------------------
     void use()
     {
+        // 激活这个程序对象
         glUseProgram(ID);
     }
+    // Uniform是一种从CPU中的应用向GPU中的着色器发送数据的方式，但uniform和顶点属性有些不同。首先，uniform是全局的(Global)。全局意味着uniform变量必须在每个着色器程序对象中都是独一无二的，而且它可以被着色器程序的任意着色器在任意阶段访问。第二，无论你把uniform值设置成什么，uniform会一直保存它们的数据，直到它们被重置或更新。(如果你声明了一个uniform却在GLSL代码中没用过，编译器会静默移除这个变量，导致最后编译出的版本中并不会包含它，这可能导致几个非常麻烦的错误，记住这点！)
+    //
     // utility uniform functions
     // ------------------------------------------------------------------------
     void setBool(const std::string &name, bool value) const
     {
+        // glGetUniformLocation查询uniform的位置值
+        // 第一个参数是着色器名字
+        // 第二个参数是uniform的名字
         glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value);
     }
     // ------------------------------------------------------------------------
     void setInt(const std::string &name, int value) const
     {
+        // glUniform函数根据glGetUniformLocation的位置来设置uniform属性的值为value
         glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
     }
     // ------------------------------------------------------------------------

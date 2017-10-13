@@ -37,6 +37,9 @@ void base::renderLoop() {
     // 这一步是通过VAO间接绑定之前定义的顶点属性配置，和VBO的顶点数据
     glBindVertexArray(VAO);
     // 绘制
+    // 第一个参数是打算绘制的OpenGL图元的类型
+    // 第二个参数是第二个参数指定了顶点数组的起始索引
+    // 第三个参数是指定我们打算绘制多少个顶点
     glDrawArrays(GL_TRIANGLES, 0, 3);
     
     // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)

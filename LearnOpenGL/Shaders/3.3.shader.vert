@@ -10,7 +10,7 @@ out vec3 ourColor;
 
 void main()
 {
-    // 为了设置顶点着色器的输出，我们必须把位置数据赋值给预定义的gl_Position变量，它在幕后是vec4类型的, gl_Position设置的值会成为该顶点着色器的输出
+    // 它是顶点着色器的裁剪空间输出位置向量(为了设置顶点着色器的输出，我们必须把位置数据赋值给预定义的gl_Position变量，它在幕后是vec4类型的)
     gl_Position = vec4(aPos, 1.0);
     ourColor = aColor;
 }

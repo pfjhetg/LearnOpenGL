@@ -100,7 +100,6 @@ void light_casters_directional::renderLoop() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
     // render the triangle
-    // 要想绘制我们想要的物体，OpenGL给我们提供了glDrawArrays函数，它使用当前激活的着色器，之前定义的顶点属性配置，和VBO的顶点数据（通过VAO间接绑定）来绘制图元。
     // 这一步是激活着色器
     this->lightingShader->use();
     this->lightingShader->setVec3("light.direction", -0.2f, -1.0f, -0.3f);
