@@ -23,6 +23,7 @@ public:
     
     base();
     base(GLFWwindow *window);
+    virtual void processInput(GLFWwindow *window);
     virtual void loadShader();
     virtual void renderLoop();
     virtual void deallocate();

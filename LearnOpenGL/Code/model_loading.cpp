@@ -13,9 +13,6 @@ model_loading::model_loading(GLFWwindow *window) {
 }
 
 void model_loading::loadShader() {
-    // 禁用鼠标
-//    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-    
     this->shader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/model_loading.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/model_loading.frag");
      this->ourModel = new Model("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Sources/nanosuit/nanosuit.obj");
 }
