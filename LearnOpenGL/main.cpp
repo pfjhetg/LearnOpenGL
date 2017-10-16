@@ -17,6 +17,7 @@
 #include "cubemaps_skybox.hpp"
 #include "advanced_glsl_ubo.hpp"
 #include "geometry_shader_houses.hpp"
+#include "instancing_quads.hpp"
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -74,7 +75,8 @@ int main() {
 //    base = new framebuffers(window);//帧缓冲
 //    base = new cubemaps_skybox(window);//天空盒子
 //    base = new advanced_glsl_ubo(window);//使用Uniform缓冲
-    base = new geometry_shader_houses(window);//几何着色器画房子
+//    base = new geometry_shader_houses(window);//几何着色器画房子
+    base = new instancing_quads(window);//实例化quad
     
     // build and compile our shader program
     base->loadShader();

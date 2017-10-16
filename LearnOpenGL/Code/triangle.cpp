@@ -15,7 +15,6 @@ triangle::triangle(GLFWwindow *window) {
 void triangle::loadShader() {
     // build and compile our shader program, 绝对路径
     // ------------------------------------
-    //    Shader ourShader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.3.shader.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.3.shader.frag");
     this->shader = new Shader("/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.3.shader.vert", "/Users/pfjhetg/Desktop/LearnOpenGL/LearnOpenGL/Shaders/3.3.shader.frag");
     
     // set up vertex data (and buffer(s)) and configure vertex attributes
@@ -38,13 +37,21 @@ void triangle::loadShader() {
     // 绑定顶点数组对象
     glBindVertexArray(VAO);
     
-    
     // 绑定顶点缓冲对象
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    // 缓冲数据:把定点数据复制到缓冲的内存中
+    // 缓冲数据:把顶点数据复制到缓冲的内存中
+    // 第一个参数是目标缓冲的类型
+    // 第二个参数是指定传输数据大小(字节为单位)
+    // 第三个参数是我们希望发送的实际数据
+    // 第三个参数是我们希望显卡如果管理给定的数据:
+    // GL_STATIC_DRAW ：数据不会或几乎不会改变。
+    // GL_DYNAMIC_DRAW：数据会被改变很多。
+    // GL_STREAM_DRAW ：数据每次绘制时都会改变。
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
-    // position attribute
+    ////////////现在我们已经把顶点数据储存在显卡的内存中，用VBO这个顶点缓冲对象管理。
+    
+    // position attribute 链接顶点属性
     // glVertexAttribPointer函数告诉OpenGL该如何解析顶点数据（应用到逐个顶点属性上）
     // 第一个参数指定我们要配置的顶点属性,我们在顶点着色器中使用layout(location = 0)定义了position顶点属性的位置值(Location),它可以把顶点属性的位置值设置为0。因为我们希望把数据传递到这一个顶点属性中，所以这里我们传入0。
     // 第二个参数指定顶点属性的大小。顶点属性是一个vec3，它由3个值组成，所以大小是3.
@@ -61,5 +68,5 @@ void triangle::loadShader() {
     
     // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
-    // glBindVertexArray(0);
+//     glBindVertexArray(0);
 }

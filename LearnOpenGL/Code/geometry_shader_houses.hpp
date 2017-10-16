@@ -13,8 +13,6 @@
 
 class geometry_shader_houses: public base {
 public:
-    unsigned int uboMatrices;
-    unsigned int cubeVAO, cubeVBO;
     geometry_shader_houses(GLFWwindow *window);
     void loadShader();
     void renderLoop();
