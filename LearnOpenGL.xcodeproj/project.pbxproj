@@ -11,6 +11,7 @@
 		EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF261CFD1F74BCDF00C6FA2B /* basic_lighting_specular.cpp */; };
 		EF261D061F74F4BA00C6FA2B /* materials.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF261D041F74F4BA00C6FA2B /* materials.cpp */; };
 		EF261D0E1F75016C00C6FA2B /* lighting_maps_diffuse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF261D0C1F75016C00C6FA2B /* lighting_maps_diffuse.cpp */; };
+		EF2ED79F1F9485D10066901E /* geometry_shader_houses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF2ED79D1F9485D10066901E /* geometry_shader_houses.cpp */; };
 		EF3BF8471F6F774800849CF5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF3BF8461F6F774800849CF5 /* main.cpp */; };
 		EF3BF84F1F6F77DA00849CF5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */; };
 		EF3BF8531F6F783B00849CF5 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */; };
@@ -68,6 +69,11 @@
 		EF261D0B1F75015500C6FA2B /* 4.1.lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 4.1.lamp.frag; sourceTree = "<group>"; };
 		EF261D0C1F75016C00C6FA2B /* lighting_maps_diffuse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lighting_maps_diffuse.cpp; sourceTree = "<group>"; };
 		EF261D0D1F75016C00C6FA2B /* lighting_maps_diffuse.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lighting_maps_diffuse.hpp; sourceTree = "<group>"; };
+		EF2ED79D1F9485D10066901E /* geometry_shader_houses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geometry_shader_houses.cpp; sourceTree = "<group>"; };
+		EF2ED79E1F9485D10066901E /* geometry_shader_houses.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = geometry_shader_houses.hpp; sourceTree = "<group>"; };
+		EF2ED7A01F9485EE0066901E /* 9.1.geometry_shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 9.1.geometry_shader.vert; sourceTree = "<group>"; };
+		EF2ED7A11F9485F70066901E /* 9.1.geometry_shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 9.1.geometry_shader.frag; sourceTree = "<group>"; };
+		EF2ED7A21F9486120066901E /* 9.1.geometry_shader.gs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 9.1.geometry_shader.gs; sourceTree = "<group>"; };
 		EF3BF8431F6F774800849CF5 /* LearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3BF8461F6F774800849CF5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EF3BF84E1F6F77DA00849CF5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -604,6 +610,9 @@
 				EF412C911F90A00D005E128E /* 8.green.frag */,
 				EF412C921F90A016005E128E /* 8.blue.frag */,
 				EF412C931F90A020005E128E /* 8.yellow.frag */,
+				EF2ED7A01F9485EE0066901E /* 9.1.geometry_shader.vert */,
+				EF2ED7A11F9485F70066901E /* 9.1.geometry_shader.frag */,
+				EF2ED7A21F9486120066901E /* 9.1.geometry_shader.gs */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -978,6 +987,8 @@
 				EFDEB1B21F8F08DD00876087 /* cubemaps_skybox.hpp */,
 				EF412C8C1F909FC5005E128E /* advanced_glsl_ubo.cpp */,
 				EF412C8D1F909FC5005E128E /* advanced_glsl_ubo.hpp */,
+				EF2ED79D1F9485D10066901E /* geometry_shader_houses.cpp */,
+				EF2ED79E1F9485D10066901E /* geometry_shader_houses.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -1062,6 +1073,7 @@
 				EF261D061F74F4BA00C6FA2B /* materials.cpp in Sources */,
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
 				EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */,
+				EF2ED79F1F9485D10066901E /* geometry_shader_houses.cpp in Sources */,
 				EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */,
 				EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */,
 				EF594DD31F7DDFA8008EE0D6 /* model_loading.cpp in Sources */,

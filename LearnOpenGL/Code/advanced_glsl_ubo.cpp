@@ -84,7 +84,7 @@ void advanced_glsl_ubo::loadShader() {
     unsigned int uniformBlockIndexYellow = glGetUniformBlockIndex(shaderYellow->ID, "Matrices");
     
     // then we link each shader's uniform block to this uniform binding point
-    // glUniformBlockBinding函数，它的第一个参数是一个程序对象，第二个是一个Uniform块索引,第三个是链接到的绑定点
+    // glUniformBlockBinding函数将Uniform块绑定到一个特定的绑定点中，它的第一个参数是一个程序对象, 第二个是一个Uniform块索引, 第三个是链接到的绑定点
     glUniformBlockBinding(shaderRed->ID, uniformBlockIndexRed, 0);
     glUniformBlockBinding(shaderGreen->ID, uniformBlockIndexGreen, 0);
     glUniformBlockBinding(shaderBlue->ID, uniformBlockIndexBlue, 0);
@@ -101,6 +101,11 @@ void advanced_glsl_ubo::loadShader() {
     // store the projection matrix (we only do this once now) (note: we're not using zoom anymore by changing the FoV)
     glm::mat4 projection = glm::perspective(45.0f, (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
     glBindBuffer(GL_UNIFORM_BUFFER, uboMatrices);
+    // 填充缓冲的特定区域
+    // 第一个参数是缓冲目标
+    // 第二个参数是偏移量
+    // 第三个参数是数据的大小
+    // 第四个参数是数据本身
     glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), glm::value_ptr(projection));
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
