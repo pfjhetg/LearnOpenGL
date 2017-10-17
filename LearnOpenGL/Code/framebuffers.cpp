@@ -122,6 +122,7 @@ void framebuffers::loadShader() {
     screenShader->use();
     screenShader->setInt("screenTexture", 0);
     
+    // FBO
     // framebuffer configuration
     // -------------------------
     glGenFramebuffers(1, &framebuffer);
@@ -132,13 +133,19 @@ void framebuffers::loadShader() {
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, SCR_WIDTH, SCR_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    // 将它附加到当前绑定的帧缓冲对象
+    // 附加到帧缓冲上
+    // 第一个参数是帧缓冲的目标（绘制、读取或者两者皆有）
+    // 第二个参数是我们想要附加的附件类型。当前我们正在附加一个颜色附件。注意最后的0意味着我们可以附加多个颜色附件。我们将在之后的教程中提到
+    // 第三个参数是你希望附加的纹理类型
+    // 第四个参数是要附加的纹理本身
+    // 第五个参数是多级渐远纹理的级别。我们将它保留为0
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureColorbuffer, 0);
     // create a renderbuffer object for depth and stencil attachment (we won't be sampling these) 附加深度（和模板）附件
     glGenRenderbuffers(1, &RBO);
     glBindRenderbuffer(GL_RENDERBUFFER, RBO);
+    // 创建一个深度和模板渲染缓冲对象可以通过调用glRenderbufferStorage函数来完成
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, SCR_WIDTH, SCR_HEIGHT); // use a single renderbuffer object for both a depth AND stencil buffer.
-    // 将它附加到当前绑定的帧缓冲对象
+    // 附加到帧缓冲上
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, RBO); // now actually attach it
     // now that we actually created the framebuffer and added all attachments we want to check if it is actually complete now
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
