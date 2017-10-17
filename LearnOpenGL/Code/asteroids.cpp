@@ -10,6 +10,7 @@
 
 asteroids::asteroids(GLFWwindow *window) {
     this->window = window;
+    glEnable(GL_DEPTH_TEST);
     this->camera = new Camera(glm::vec3(0, 0, 1000.0f));
 }
 

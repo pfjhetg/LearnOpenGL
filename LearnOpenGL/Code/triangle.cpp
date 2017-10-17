@@ -31,6 +31,7 @@ void triangle::loadShader() {
     // 2.vertex attribute 对应的 VBO 的名字, 由一对 glBindBuffer 和  glVertexAttribPointer 设置
     // 3.#当前#绑定的 GL_ELEMENT_ARRAY_BUFFER/GL_ARRAY_BUFFER 的名字，由 glBindBuffer 设置。
     
+    // glGenXXXX的第一个参数表示生成的数量
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).

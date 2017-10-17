@@ -19,6 +19,7 @@
 #include "geometry_shader_houses.hpp"
 #include "instancing_quads.hpp"
 #include "asteroids.hpp"
+#include "asteroids_instanced.hpp"
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -78,7 +79,8 @@ int main() {
 //    base = new advanced_glsl_ubo(window);//使用Uniform缓冲
 //    base = new geometry_shader_houses(window);//几何着色器画房子
 //    base = new instancing_quads(window);//实例化quad
-    base = new asteroids(window);//行星带:1
+//    base = new asteroids(window);//行星带:1
+    base = new asteroids_instanced(window);//行星带:2 -实例化数组
     
     // build and compile our shader program
     base->loadShader();

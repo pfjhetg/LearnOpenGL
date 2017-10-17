@@ -90,6 +90,8 @@ void textures::loadShader() {
     
     
     // texture2
+    // 第一个参数是生成纹理的数量
+    // 然后把它们储存在第二个参数的unsigned int数组中（我们的例子中只是单独的一个unsigned int）
     glGenTextures(1, &texture2);
     glBindTexture(GL_TEXTURE_2D, texture2);
     // set the texture wrapping parameters
@@ -131,7 +133,7 @@ void textures::renderLoop() {
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     // 清空颜色缓冲
     glClear(GL_COLOR_BUFFER_BIT);
-    // glActiveTexture激活纹理单元，传入我们需要使用的纹理单元
+    // glActiveTexture激活纹理单元，传入我们需要使用的纹理单元,纹理单元GL_TEXTURE0默认总是被激活
     // OpenGL至少保证有16个纹理单元供你使用，也就是说你可以激活从GL_TEXTURE0到GL_TEXTRUE15。它们都是按顺序定义的，所以我们也可以通过GL_TEXTURE0 + 8的方式获得GL_TEXTURE8，这在当我们需要循环一些纹理单元的时候会很有用
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture1);

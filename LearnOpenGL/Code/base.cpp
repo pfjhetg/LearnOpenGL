@@ -10,6 +10,7 @@
 
 base::base() {
     this->camera = new Camera(glm::vec3(0.5f, 0.5f, 100.0f));
+    this->camera->MovementSpeed = 1000.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -58,6 +59,10 @@ void base::deallocate() {
 
 void base::processInput(GLFWwindow *window)
 {
+    float currentFrame = glfwGetTime();
+    deltaTime = currentFrame - lastFrame;
+    lastFrame = currentFrame;
+    
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
     
