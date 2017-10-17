@@ -469,6 +469,12 @@
 		EFDEB1B01F8F089200876087 /* 6.1.skybox.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.1.skybox.frag; sourceTree = "<group>"; };
 		EFDEB1B11F8F08DD00876087 /* cubemaps_skybox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cubemaps_skybox.cpp; sourceTree = "<group>"; };
 		EFDEB1B21F8F08DD00876087 /* cubemaps_skybox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cubemaps_skybox.hpp; sourceTree = "<group>"; };
+		EFF8AD6F1F959BC8005A89AA /* planet.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = planet.mtl; sourceTree = "<group>"; };
+		EFF8AD701F959BC8005A89AA /* planet.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = planet.obj; sourceTree = "<group>"; };
+		EFF8AD711F959BC8005A89AA /* planet_Quom1200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet_Quom1200.png; sourceTree = "<group>"; };
+		EFF8AD731F959BED005A89AA /* Rock-Texture-Surface.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rock-Texture-Surface.jpg"; sourceTree = "<group>"; };
+		EFF8AD741F959BED005A89AA /* rock.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = rock.mtl; sourceTree = "<group>"; };
+		EFF8AD751F959BED005A89AA /* rock.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = rock.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -627,6 +633,8 @@
 		EF3BF8551F6F97BB00849CF5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EFF8AD721F959BED005A89AA /* rock */,
+				EFF8AD6E1F959BC8005A89AA /* planet */,
 				EFCDE46F1F8E053900D08958 /* skybox */,
 				EF1768511F79FF1400711B57 /* nanosuit */,
 				EF614B3C1F8CAFA7008BED82 /* bricks2_disp.jpg */,
@@ -1013,6 +1021,26 @@
 				EFCDE4751F8E053900D08958 /* top.jpg */,
 			);
 			path = skybox;
+			sourceTree = "<group>";
+		};
+		EFF8AD6E1F959BC8005A89AA /* planet */ = {
+			isa = PBXGroup;
+			children = (
+				EFF8AD6F1F959BC8005A89AA /* planet.mtl */,
+				EFF8AD701F959BC8005A89AA /* planet.obj */,
+				EFF8AD711F959BC8005A89AA /* planet_Quom1200.png */,
+			);
+			path = planet;
+			sourceTree = "<group>";
+		};
+		EFF8AD721F959BED005A89AA /* rock */ = {
+			isa = PBXGroup;
+			children = (
+				EFF8AD731F959BED005A89AA /* Rock-Texture-Surface.jpg */,
+				EFF8AD741F959BED005A89AA /* rock.mtl */,
+				EFF8AD751F959BED005A89AA /* rock.obj */,
+			);
+			path = rock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
