@@ -35,6 +35,7 @@
 		EFB02EDA1F78D329007CBE0E /* multiple_lights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB02ED81F78D329007CBE0E /* multiple_lights.cpp */; };
 		EFB02EE21F78FA06007CBE0E /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3BF8501F6F782600849CF5 /* libGLEW.2.1.0.dylib */; };
 		EFDEB1B31F8F08DD00876087 /* cubemaps_skybox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFDEB1B11F8F08DD00876087 /* cubemaps_skybox.cpp */; };
+		EFF8AD781F959CA8005A89AA /* asteroids.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF8AD761F959CA8005A89AA /* asteroids.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -475,6 +476,10 @@
 		EFF8AD731F959BED005A89AA /* Rock-Texture-Surface.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rock-Texture-Surface.jpg"; sourceTree = "<group>"; };
 		EFF8AD741F959BED005A89AA /* rock.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = rock.mtl; sourceTree = "<group>"; };
 		EFF8AD751F959BED005A89AA /* rock.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = rock.obj; sourceTree = "<group>"; };
+		EFF8AD761F959CA8005A89AA /* asteroids.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asteroids.cpp; sourceTree = "<group>"; };
+		EFF8AD771F959CA8005A89AA /* asteroids.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = asteroids.hpp; sourceTree = "<group>"; };
+		EFF8AD791F959CC1005A89AA /* 10.2.instancing.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 10.2.instancing.vert; sourceTree = "<group>"; };
+		EFF8AD7A1F959CCF005A89AA /* 10.2.instancing.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 10.2.instancing.frag; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -626,6 +631,8 @@
 				EF2ED7A21F9486120066901E /* 9.1.geometry_shader.gs */,
 				EF2ED7A31F948F5B0066901E /* 10.1.instancing.vert */,
 				EF2ED7A41F948F670066901E /* 10.1.instancing.frag */,
+				EFF8AD791F959CC1005A89AA /* 10.2.instancing.vert */,
+				EFF8AD7A1F959CCF005A89AA /* 10.2.instancing.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -1006,6 +1013,8 @@
 				EF2ED79E1F9485D10066901E /* geometry_shader_houses.hpp */,
 				EF2ED7A51F948F850066901E /* instancing_quads.cpp */,
 				EF2ED7A61F948F850066901E /* instancing_quads.hpp */,
+				EFF8AD761F959CA8005A89AA /* asteroids.cpp */,
+				EFF8AD771F959CA8005A89AA /* asteroids.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -1112,6 +1121,7 @@
 				EF3BF8471F6F774800849CF5 /* main.cpp in Sources */,
 				EF79B5161F725824006F8A9F /* coordinate_systems_depth.cpp in Sources */,
 				EF2ED79F1F9485D10066901E /* geometry_shader_houses.cpp in Sources */,
+				EFF8AD781F959CA8005A89AA /* asteroids.cpp in Sources */,
 				EFB02ECF1F78A282007CBE0E /* light_casters_directional.cpp in Sources */,
 				EF79B50B1F723974006F8A9F /* transformations.cpp in Sources */,
 				EF594DD31F7DDFA8008EE0D6 /* model_loading.cpp in Sources */,
