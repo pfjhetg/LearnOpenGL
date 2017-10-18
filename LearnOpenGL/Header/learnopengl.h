@@ -9,12 +9,21 @@
 #ifndef learnopengl_h
 #define learnopengl_h
 
+
+//#include <GL/glew.h>
+//#define GLEW_STATIC
+
 #include "glad.h"
+
 #include <GLFW/glfw3.h>
+
 
 #include "stb_image.h"
 #include "camera.h"
 
+// 文本
+#include <freetype2/ft2build.h>
+#include FT_FREETYPE_H
 
 // settings
 const unsigned int SCR_WIDTH = 1280;

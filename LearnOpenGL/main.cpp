@@ -21,6 +21,7 @@
 #include "asteroids.hpp"
 #include "asteroids_instanced.hpp"
 #include "anti_aliasing_post_processing.hpp"
+#include "text_rendering.hpp"
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -82,7 +83,8 @@ int main() {
 //    base = new instancing_quads(window);//实例化quad
 //    base = new asteroids(window);//行星带:1
 //    base = new asteroids_instanced(window);//行星带:2 -实例化数组
-    base = new anti_aliasing_post_processing(window);//抗锯齿(反走样)
+//    base = new anti_aliasing_post_processing(window);//抗锯齿(反走样)
+    base = new text_rendering(window);//文本渲染
     
     // build and compile our shader program
     base->loadShader();

@@ -38,6 +38,7 @@
 		EFF8AD781F959CA8005A89AA /* asteroids.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF8AD761F959CA8005A89AA /* asteroids.cpp */; };
 		EFF8AD821F95A74F005A89AA /* asteroids_instanced.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF8AD801F95A74F005A89AA /* asteroids_instanced.cpp */; };
 		EFF8AD881F95E4EF005A89AA /* anti_aliasing_post_processing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF8AD861F95E4EF005A89AA /* anti_aliasing_post_processing.cpp */; };
+		EFFB37801F9729420054F918 /* text_rendering.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFFB377E1F9729420054F918 /* text_rendering.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -496,6 +497,11 @@
 		EFF8AD8C1F95E841005A89AA /* 11.anti_aliasing.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 11.anti_aliasing.vs; sourceTree = "<group>"; };
 		EFFB37791F9707980054F918 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreetype.6.dylib; path = ../../../../usr/local/Cellar/freetype/2.8.1/lib/libfreetype.6.dylib; sourceTree = "<group>"; };
 		EFFB377B1F9708B30054F918 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = ../../../../usr/local/Cellar/freetype/2.8.1/lib/libfreetype.a; sourceTree = "<group>"; };
+		EFFB377E1F9729420054F918 /* text_rendering.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = text_rendering.cpp; sourceTree = "<group>"; };
+		EFFB377F1F9729420054F918 /* text_rendering.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = text_rendering.hpp; sourceTree = "<group>"; };
+		EFFB37811F972B8B0054F918 /* text.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = text.vert; sourceTree = "<group>"; };
+		EFFB37821F972B9B0054F918 /* text.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = text.frag; sourceTree = "<group>"; };
+		EFFB37851F973DC60054F918 /* font_1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font_1.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -659,6 +665,8 @@
 				EFF8AD891F95E841005A89AA /* 11.aa_post.fs */,
 				EFF8AD8C1F95E841005A89AA /* 11.anti_aliasing.vs */,
 				EFF8AD8B1F95E841005A89AA /* 11.anti_aliasing.fs */,
+				EFFB37811F972B8B0054F918 /* text.vert */,
+				EFFB37821F972B9B0054F918 /* text.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -666,6 +674,7 @@
 		EF3BF8551F6F97BB00849CF5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EFFB37841F973DB70054F918 /* font */,
 				EFF8AD721F959BED005A89AA /* rock */,
 				EFF8AD6E1F959BC8005A89AA /* planet */,
 				EFCDE46F1F8E053900D08958 /* skybox */,
@@ -1045,6 +1054,8 @@
 				EFF8AD811F95A74F005A89AA /* asteroids_instanced.hpp */,
 				EFF8AD861F95E4EF005A89AA /* anti_aliasing_post_processing.cpp */,
 				EFF8AD871F95E4EF005A89AA /* anti_aliasing_post_processing.hpp */,
+				EFFB377E1F9729420054F918 /* text_rendering.cpp */,
+				EFFB377F1F9729420054F918 /* text_rendering.hpp */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -1080,6 +1091,14 @@
 				EFF8AD751F959BED005A89AA /* rock.obj */,
 			);
 			path = rock;
+			sourceTree = "<group>";
+		};
+		EFFB37841F973DB70054F918 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				EFFB37851F973DC60054F918 /* font_1.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1144,6 +1163,7 @@
 				EF412C8E1F909FC5005E128E /* advanced_glsl_ubo.cpp in Sources */,
 				EF261CFF1F74BCDF00C6FA2B /* basic_lighting_specular.cpp in Sources */,
 				EFDEB1B31F8F08DD00876087 /* cubemaps_skybox.cpp in Sources */,
+				EFFB37801F9729420054F918 /* text_rendering.cpp in Sources */,
 				EF7AC18E1F70A67000AD327C /* stb_image.cpp in Sources */,
 				EF261D0E1F75016C00C6FA2B /* lighting_maps_diffuse.cpp in Sources */,
 				EF261D061F74F4BA00C6FA2B /* materials.cpp in Sources */,
@@ -1216,6 +1236,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1257,6 +1278,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1270,6 +1292,7 @@
 					"$(glfw_header)",
 					"$(assimp_header)",
 					"$(libfreetype_header)",
+					/usr/local/Cellar/freetype/2.8.1/include/freetype2,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(glew_lib)",
@@ -1277,6 +1300,7 @@
 					"$(assimp_lib)",
 					"$(libfreetype_lib)",
 				);
+				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";
 			};
@@ -1291,6 +1315,7 @@
 					"$(glfw_header)",
 					"$(assimp_header)",
 					"$(libfreetype_header)",
+					/usr/local/Cellar/freetype/2.8.1/include/freetype2,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(glew_lib)",
@@ -1298,6 +1323,7 @@
 					"$(assimp_lib)",
 					"$(libfreetype_lib)",
 				);
+				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";
 			};
