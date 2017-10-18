@@ -494,6 +494,8 @@
 		EFF8AD8A1F95E841005A89AA /* 11.aa_post.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 11.aa_post.vs; sourceTree = "<group>"; };
 		EFF8AD8B1F95E841005A89AA /* 11.anti_aliasing.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 11.anti_aliasing.fs; sourceTree = "<group>"; };
 		EFF8AD8C1F95E841005A89AA /* 11.anti_aliasing.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = 11.anti_aliasing.vs; sourceTree = "<group>"; };
+		EFFB37791F9707980054F918 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreetype.6.dylib; path = ../../../../usr/local/Cellar/freetype/2.8.1/lib/libfreetype.6.dylib; sourceTree = "<group>"; };
+		EFFB377B1F9708B30054F918 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = ../../../../usr/local/Cellar/freetype/2.8.1/lib/libfreetype.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -571,6 +573,8 @@
 		EF3BF84D1F6F77DA00849CF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFFB377B1F9708B30054F918 /* libfreetype.a */,
+				EFFB37791F9707980054F918 /* libfreetype.6.dylib */,
 				EFB02EDF1F78F776007CBE0E /* libassimp.4.0.1.dylib */,
 				EF3BF8521F6F783B00849CF5 /* libglfw.3.2.dylib */,
 				EF3BF8501F6F782600849CF5 /* libGLEW.2.1.0.dylib */,
@@ -1265,11 +1269,13 @@
 					"$(glew_header)",
 					"$(glfw_header)",
 					"$(assimp_header)",
+					"$(libfreetype_header)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(glew_lib)",
 					"$(glfw_lib)",
 					"$(assimp_lib)",
+					"$(libfreetype_lib)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";
@@ -1284,11 +1290,13 @@
 					"$(glew_header)",
 					"$(glfw_header)",
 					"$(assimp_header)",
+					"$(libfreetype_header)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(glew_lib)",
 					"$(glfw_lib)",
 					"$(assimp_lib)",
+					"$(libfreetype_lib)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wno-unused-variable";
