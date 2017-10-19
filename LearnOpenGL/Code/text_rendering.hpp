@@ -14,12 +14,6 @@
 class text_rendering: public base {
 public:
     Shader *screenShader;
-    unsigned int cubeVAO, cubeVBO;
-    unsigned int quadVAO, quadVBO;
-    unsigned int framebuffer;
-    unsigned int intermediateFBO;
-    unsigned int rbo;
-    unsigned int screenTexture;
     text_rendering(GLFWwindow *window);
     void loadShader();
     void renderLoop();
