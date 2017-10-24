@@ -88,7 +88,6 @@ void textures::loadShader() {
     // 释放图像内存
     stbi_image_free(data);
     
-    
     // texture2
     // 第一个参数是生成纹理的数量
     // 然后把它们储存在第二个参数的unsigned int数组中（我们的例子中只是单独的一个unsigned int）

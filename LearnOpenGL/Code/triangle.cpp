@@ -40,7 +40,7 @@ void triangle::loadShader() {
     
     // 绑定顶点缓冲对象
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    // 缓冲数据:把顶点数据复制到缓冲的内存中
+    // glBufferData缓冲数据:把顶点数据复制到缓冲的内存中(数据从CPU中传送至GPU)
     // 第一个参数是目标缓冲的类型
     // 第二个参数是指定传输数据大小(字节为单位)
     // 第三个参数是我们希望发送的实际数据

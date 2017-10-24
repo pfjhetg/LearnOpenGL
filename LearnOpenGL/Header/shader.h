@@ -9,8 +9,6 @@
 #ifndef shader_h
 #define shader_h
 
-#include "glad.h"
-
 #include "glm.hpp"
 #include "matrix_transform.hpp"
 #include "type_ptr.hpp"

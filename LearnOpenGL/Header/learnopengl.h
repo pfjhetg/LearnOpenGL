@@ -9,14 +9,8 @@
 #ifndef learnopengl_h
 #define learnopengl_h
 
-
-//#include <GL/glew.h>
-//#define GLEW_STATIC
-
 #include "glad.h"
-
 #include <GLFW/glfw3.h>
-
 
 #include "stb_image.h"
 #include "camera.h"

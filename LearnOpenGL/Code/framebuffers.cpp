@@ -128,8 +128,8 @@ void framebuffers::loadShader() {
     glGenFramebuffers(1, &framebuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
     // create a color attachment texture 附加纹理图像
-    glGenTextures(1, &textureColorbuffer);
-    glBindTexture(GL_TEXTURE_2D, textureColorbuffer);
+    glGenTextures(1, &texColorBuffer);
+    glBindTexture(GL_TEXTURE_2D, texColorBuffer);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, SCR_WIDTH, SCR_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -139,7 +139,7 @@ void framebuffers::loadShader() {
     // 第三个参数是你希望附加的纹理类型
     // 第四个参数是要附加的纹理本身
     // 第五个参数是多级渐远纹理的级别。我们将它保留为0
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureColorbuffer, 0);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texColorBuffer, 0);
     // create a renderbuffer object for depth and stencil attachment (we won't be sampling these) 附加深度（和模板）附件
     glGenRenderbuffers(1, &RBO);
     glBindRenderbuffer(GL_RENDERBUFFER, RBO);
@@ -155,6 +155,7 @@ void framebuffers::loadShader() {
 
 void framebuffers::renderLoop() {
     // ------
+    // 第一处理阶段(Pass)
     // bind to framebuffer and draw scene as we normally would to color texture
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
     glEnable(GL_DEPTH_TEST); // enable depth testing (is disabled for rendering screen-space quad)
@@ -195,6 +196,7 @@ void framebuffers::renderLoop() {
     glDrawArrays(GL_TRIANGLES, 0, 6);
     glBindVertexArray(0);
     
+    // 第二处理阶段(Pass), 绑定默认的帧缓冲, 绘制一个横跨整个屏幕的四边形，将帧缓冲的颜色缓冲作为它的纹理
     // now bind back to default framebuffer and draw a quad plane with the attached framebuffer color texture
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     glDisable(GL_DEPTH_TEST); // disable depth test so screen-space quad isn't discarded due to depth test.
@@ -204,7 +206,7 @@ void framebuffers::renderLoop() {
     
     screenShader->use();
     glBindVertexArray(quadVAO);
-    glBindTexture(GL_TEXTURE_2D, textureColorbuffer);	// use the color attachment texture as the texture of the quad plane
+    glBindTexture(GL_TEXTURE_2D, texColorBuffer);	// use the color attachment texture as the texture of the quad plane
     glDrawArrays(GL_TRIANGLES, 0, 6);
 
     // 结束线框模式

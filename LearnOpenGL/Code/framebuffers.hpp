@@ -18,7 +18,7 @@ public:
     Model *ourModel;
     unsigned int diffuseMap;
     unsigned int specularMap;
-    unsigned int framebuffer, textureColorbuffer;
+    unsigned int framebuffer, texColorBuffer;
     unsigned int cubeVAO, cubeVBO, planeVAO, planeVBO, quadVAO, quadVBO, RBO;
     unsigned int cubeTexture, floorTexture;
     framebuffers(GLFWwindow *window);
